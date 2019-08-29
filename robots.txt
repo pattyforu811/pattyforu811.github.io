@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://pattyforu811.github.io/sitemap.xml
