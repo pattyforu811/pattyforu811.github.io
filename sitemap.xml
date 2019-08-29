@@ -3,20 +3,27 @@
   
   <url>
     <loc>http://pattyforu811.github.io/</loc>
-    <lastmod>2019-08-30T07:16:15+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://pattyforu811.github.io/post/first/</loc>
-    <lastmod>2019-08-30T07:16:15+08:00</lastmod>
+    <lastmod>2019-08-30T07:41:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://pattyforu811.github.io/post/</loc>
+    <lastmod>2019-08-30T07:41:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://pattyforu811.github.io/post/seconed/</loc>
+    <lastmod>2019-08-30T07:41:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://pattyforu811.github.io/post/first/</loc>
     <lastmod>2019-08-30T07:16:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
