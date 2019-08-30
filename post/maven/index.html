@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Maven - Even - A super concise theme for Hugo</title>
+  <title>Maven - Patty</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,11 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="1  code    i&amp;rsquo;m title
-biu biu biu
- I&amp;#39;m title!
-biu biu biu. note biu biu biu.
-  ## right right text " /><meta name="keywords" content="maven" />
+<meta name="author" content="PattyForu" /><meta name="description" content="软件项目管理工具
+step1:下载 官网下载地址: (http://maven.apache.org/download.cgi)
+step2:配置参数 解压后打开conf/setting.xml
+ 需要配置本地仓库（jar包下载存放位置）
+1  &amp;lt;localRepository&amp;gt;E:\maven\repository&amp;lt;/localRepository&amp;gt;   （其中E:\maven\repository是自己指定的仓库文件夹位置）
+ 配置远程仓库的镜像。
+1 2 3 4 5 6  &amp;lt;mirror&amp;gt; &amp;lt;id&amp;gt;nexus&amp;lt;/id&amp;gt; &amp;lt;mirrorOf&amp;gt;*&amp;lt;/mirrorOf&amp;gt; &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public&amp;lt;/url&amp;gt; &amp;lt;/mirror&amp;gt;   我们可以在pom中定义一个下载组件的时候所使用的远程仓库。但是有时候这个远程仓库会比较忙，所以这个时候人们就想着给它创建镜像以缓解远程仓库的压力，也就是说会把对远程仓库的请求转换到对其镜像地址的请求
+ 指定jdk的版本（可选）
+1 2 3 4 5 6 7 8 9 10 11 12  &amp;lt;profile&amp;gt; &amp;lt;id&amp;gt;jdk-1.8&amp;lt;/id&amp;gt; &amp;lt;activation&amp;gt; &amp;lt;activeByDefault&amp;gt;true&amp;lt;/activeByDefault&amp;gt; &amp;lt;jdk&amp;gt;1.8&amp;lt;/jdk&amp;gt; &amp;lt;/activation&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;maven.compiler.source&amp;gt;1.8&amp;lt;/maven.compiler.source&amp;gt; &amp;lt;maven.compiler.target&amp;gt;1.8&amp;lt;/maven.compiler.target&amp;gt; &amp;lt;maven.compiler.compilerVersion&amp;gt;1.8&amp;lt;/maven.compiler.compilerVersion&amp;gt; &amp;lt;/properties&amp;gt; &amp;lt;/profile&amp;gt;   如果不开发时不用maven进行编译就可以不用配置
+  step3:idea创建maven工程   修改上面2个参数
+1.第一个参数（-DarchetypeCatalog=internal）可以在不联网的情况下，使用之前下载的插件来构建项目，而不是一定联网构建。
+2.确认自己选择的jdk版本
+   " /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -30,129 +38,312 @@ biu biu biu. note biu biu biu.
 <meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/maven/" />
+<link rel="canonical" href="http://example.org/post/maven/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
-
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Maven" />
-<meta property="og:description" content="
+<meta property="og:description" content="软件项目管理工具
+
+
+
+step1:下载
+
+官网下载地址:
+(http://maven.apache.org/download.cgi)
+
+
+
+step2:配置参数
+
+解压后打开conf/setting.xml
+
+
+需要配置本地仓库（jar包下载存放位置）
+
 
 1
 
 
-code
+&lt;localRepository&gt;E:\maven\repository&lt;/localRepository&gt;
+
+
+（其中E:\maven\repository是自己指定的仓库文件夹位置）
+
+配置远程仓库的镜像。
+
+
+1
+2
+3
+4
+5
+6
+
+
+&lt;mirror&gt;
+	&lt;id&gt;nexus&lt;/id&gt;
+	&lt;mirrorOf&gt;*&lt;/mirrorOf&gt;
+	&lt;name&gt;Nexus aliyun&lt;/name&gt;
+	&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;
+&lt;/mirror&gt;
+
+
+我们可以在pom中定义一个下载组件的时候所使用的远程仓库。但是有时候这个远程仓库会比较忙，所以这个时候人们就想着给它创建镜像以缓解远程仓库的压力，也就是说会把对远程仓库的请求转换到对其镜像地址的请求
+
+指定jdk的版本（可选）
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+
+
+&lt;profile&gt;   
+	&lt;id&gt;jdk-1.8&lt;/id&gt;   
+	&lt;activation&gt;   
+		&lt;activeByDefault&gt;true&lt;/activeByDefault&gt;   
+		&lt;jdk&gt;1.8&lt;/jdk&gt;   
+	&lt;/activation&gt;   
+	&lt;properties&gt;   
+		&lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;   
+		&lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;   
+		&lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;   
+	&lt;/properties&gt;   
+&lt;/profile&gt;
+
+
+如果不开发时不用maven进行编译就可以不用配置
+
+
+step3:idea创建maven工程
 
 
 
-i&rsquo;m title
 
-biu biu biu
+修改上面2个参数
+1.第一个参数（-DarchetypeCatalog=internal）可以在不联网的情况下，使用之前下载的插件来构建项目，而不是一定联网构建。
+2.确认自己选择的jdk版本
 
-
-I&#39;m title!
-  
-biu biu biu.
-
-note
-  biu biu biu.
-
-
-
-
-
-
-
-  
-## right
-right text
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/maven/" />
-<meta property="article:published_time" content="2019-08-30T10:40:08+08:00" />
-<meta property="article:modified_time" content="2019-08-30T10:40:08+08:00" />
+<meta property="og:url" content="http://example.org/post/maven/" />
+<meta property="article:published_time" content="2019-08-30T15:42:01+08:00" />
+<meta property="article:modified_time" content="2019-08-30T15:42:01+08:00" />
 <meta itemprop="name" content="Maven">
-<meta itemprop="description" content="
+<meta itemprop="description" content="软件项目管理工具
+
+
+
+step1:下载
+
+官网下载地址:
+(http://maven.apache.org/download.cgi)
+
+
+
+step2:配置参数
+
+解压后打开conf/setting.xml
+
+
+需要配置本地仓库（jar包下载存放位置）
+
 
 1
 
 
-code
+&lt;localRepository&gt;E:\maven\repository&lt;/localRepository&gt;
+
+
+（其中E:\maven\repository是自己指定的仓库文件夹位置）
+
+配置远程仓库的镜像。
+
+
+1
+2
+3
+4
+5
+6
+
+
+&lt;mirror&gt;
+	&lt;id&gt;nexus&lt;/id&gt;
+	&lt;mirrorOf&gt;*&lt;/mirrorOf&gt;
+	&lt;name&gt;Nexus aliyun&lt;/name&gt;
+	&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;
+&lt;/mirror&gt;
+
+
+我们可以在pom中定义一个下载组件的时候所使用的远程仓库。但是有时候这个远程仓库会比较忙，所以这个时候人们就想着给它创建镜像以缓解远程仓库的压力，也就是说会把对远程仓库的请求转换到对其镜像地址的请求
+
+指定jdk的版本（可选）
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+
+
+&lt;profile&gt;   
+	&lt;id&gt;jdk-1.8&lt;/id&gt;   
+	&lt;activation&gt;   
+		&lt;activeByDefault&gt;true&lt;/activeByDefault&gt;   
+		&lt;jdk&gt;1.8&lt;/jdk&gt;   
+	&lt;/activation&gt;   
+	&lt;properties&gt;   
+		&lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;   
+		&lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;   
+		&lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;   
+	&lt;/properties&gt;   
+&lt;/profile&gt;
+
+
+如果不开发时不用maven进行编译就可以不用配置
+
+
+step3:idea创建maven工程
 
 
 
-i&rsquo;m title
 
-biu biu biu
+修改上面2个参数
+1.第一个参数（-DarchetypeCatalog=internal）可以在不联网的情况下，使用之前下载的插件来构建项目，而不是一定联网构建。
+2.确认自己选择的jdk版本
 
-
-I&#39;m title!
-  
-biu biu biu.
-
-note
-  biu biu biu.
-
-
-
-
-
-
-
-  
-## right
-right text
 
 ">
 
 
-<meta itemprop="datePublished" content="2019-08-30T10:40:08&#43;08:00" />
-<meta itemprop="dateModified" content="2019-08-30T10:40:08&#43;08:00" />
-<meta itemprop="wordCount" content="20">
+<meta itemprop="datePublished" content="2019-08-30T15:42:01&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-30T15:42:01&#43;08:00" />
+<meta itemprop="wordCount" content="408">
 
 
 
-<meta itemprop="keywords" content="maven,spring," />
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Maven"/>
-<meta name="twitter:description" content="
+<meta name="twitter:description" content="软件项目管理工具
+
+
+
+step1:下载
+
+官网下载地址:
+(http://maven.apache.org/download.cgi)
+
+
+
+step2:配置参数
+
+解压后打开conf/setting.xml
+
+
+需要配置本地仓库（jar包下载存放位置）
+
 
 1
 
 
-code
+&lt;localRepository&gt;E:\maven\repository&lt;/localRepository&gt;
+
+
+（其中E:\maven\repository是自己指定的仓库文件夹位置）
+
+配置远程仓库的镜像。
+
+
+1
+2
+3
+4
+5
+6
+
+
+&lt;mirror&gt;
+	&lt;id&gt;nexus&lt;/id&gt;
+	&lt;mirrorOf&gt;*&lt;/mirrorOf&gt;
+	&lt;name&gt;Nexus aliyun&lt;/name&gt;
+	&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;
+&lt;/mirror&gt;
+
+
+我们可以在pom中定义一个下载组件的时候所使用的远程仓库。但是有时候这个远程仓库会比较忙，所以这个时候人们就想着给它创建镜像以缓解远程仓库的压力，也就是说会把对远程仓库的请求转换到对其镜像地址的请求
+
+指定jdk的版本（可选）
+
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+
+
+&lt;profile&gt;   
+	&lt;id&gt;jdk-1.8&lt;/id&gt;   
+	&lt;activation&gt;   
+		&lt;activeByDefault&gt;true&lt;/activeByDefault&gt;   
+		&lt;jdk&gt;1.8&lt;/jdk&gt;   
+	&lt;/activation&gt;   
+	&lt;properties&gt;   
+		&lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;   
+		&lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;   
+		&lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;   
+	&lt;/properties&gt;   
+&lt;/profile&gt;
+
+
+如果不开发时不用maven进行编译就可以不用配置
+
+
+step3:idea创建maven工程
 
 
 
-i&rsquo;m title
 
-biu biu biu
+修改上面2个参数
+1.第一个参数（-DarchetypeCatalog=internal）可以在不联网的情况下，使用之前下载的插件来构建项目，而不是一定联网构建。
+2.确认自己选择的jdk版本
 
-
-I&#39;m title!
-  
-biu biu biu.
-
-note
-  biu biu biu.
-
-
-
-
-
-
-
-  
-## right
-right text
 
 "/>
 
@@ -169,7 +360,7 @@ right text
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
+    <a href="/" class="logo">PattyForu</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -193,7 +384,7 @@ right text
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
+  <a href="/" class="logo">PattyForu</a>
 </div>
 
 <nav class="site-navbar">
@@ -221,53 +412,126 @@ right text
 
       <div class="post-meta">
         <span class="post-time"> 2019-08-30 </span>
-        <div class="post-category">
-            <a href="/categories/maven/"> maven </a>
-            </div>
         
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
     </header>
 
-    
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#step1-下载">step1:下载</a></li>
+<li><a href="#step2-配置参数">step2:配置参数</a></li>
+<li><a href="#step3-idea创建maven工程">step3:idea创建maven工程</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
     <div class="post-content">
-      <div class="highlight"><div class="chroma">
+      <p>软件项目管理工具</p>
+
+<hr />
+
+<h2 id="step1-下载">step1:下载</h2>
+
+<p>官网下载地址:
+(<a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a>)</p>
+
+<p><img src="/img/maven/step1.bmp" alt="image" /></p>
+
+<h2 id="step2-配置参数">step2:配置参数</h2>
+
+<p>解压后打开conf/setting.xml</p>
+
+<ul>
+<li><p>需要配置本地仓库（jar包下载存放位置）</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">code</pre></td></tr></table>
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;localRepository&gt;</span>E:\maven\repository<span class="nt">&lt;/localRepository&gt;</span></code></pre></td></tr></table>
 </div>
 </div>
-<blockquote>
-<p>i&rsquo;m title</p>
+<p>（其中E:\maven\repository是自己指定的仓库文件夹位置）</p></li>
 
-<p>biu biu biu</p>
-</blockquote>
-
-<div class="admonition note"><p class="admonition-title">I&#39;m title!</p>
-  
-biu biu biu.
-
-<details class="admonition note"><summary class="admonition-title">note</summary>
-  <p>biu biu biu.</p>
-
-</details>
-
-
+<li><p>配置远程仓库的镜像。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;mirror&gt;</span>
+	<span class="nt">&lt;id&gt;</span>nexus<span class="nt">&lt;/id&gt;</span>
+	<span class="nt">&lt;mirrorOf&gt;</span>*<span class="nt">&lt;/mirrorOf&gt;</span>
+	<span class="nt">&lt;name&gt;</span>Nexus aliyun<span class="nt">&lt;/name&gt;</span>
+	<span class="nt">&lt;url&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="nt">&lt;/url&gt;</span>
+<span class="nt">&lt;/mirror&gt;</span></code></pre></td></tr></table>
 </div>
-
-<div class='align-right'>
-  
-## right
-right text
-
 </div>
+<p>我们可以在pom中定义一个下载组件的时候所使用的远程仓库。但是有时候这个远程仓库会比较忙，所以这个时候人们就想着给它创建镜像以缓解远程仓库的压力，也就是说会把对远程仓库的请求转换到对其镜像地址的请求</p></li>
+
+<li><p>指定jdk的版本（可选）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;profile&gt;</span>   
+	<span class="nt">&lt;id&gt;</span>jdk-1.8<span class="nt">&lt;/id&gt;</span>   
+	<span class="nt">&lt;activation&gt;</span>   
+		<span class="nt">&lt;activeByDefault&gt;</span>true<span class="nt">&lt;/activeByDefault&gt;</span>   
+		<span class="nt">&lt;jdk&gt;</span>1.8<span class="nt">&lt;/jdk&gt;</span>   
+	<span class="nt">&lt;/activation&gt;</span>   
+	<span class="nt">&lt;properties&gt;</span>   
+		<span class="nt">&lt;maven.compiler.source&gt;</span>1.8<span class="nt">&lt;/maven.compiler.source&gt;</span>   
+		<span class="nt">&lt;maven.compiler.target&gt;</span>1.8<span class="nt">&lt;/maven.compiler.target&gt;</span>   
+		<span class="nt">&lt;maven.compiler.compilerVersion&gt;</span>1.8<span class="nt">&lt;/maven.compiler.compilerVersion&gt;</span>   
+	<span class="nt">&lt;/properties&gt;</span>   
+<span class="nt">&lt;/profile&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>如果不开发时不用maven进行编译就可以不用配置</p></li>
+</ul>
+
+<h2 id="step3-idea创建maven工程">step3:idea创建maven工程</h2>
+
+<ul>
+<li><img src="/img/maven/step3.bmp" alt="image" /></li>
+<li><img src="/img/maven/step3.1.bmp" alt="image" /><br />
+修改上面2个参数<br />
+1.第一个参数（-DarchetypeCatalog=internal）可以在不联网的情况下，使用之前下载的插件来构建项目，而不是一定联网构建。<br />
+2.确认自己选择的jdk版本<br /></li>
+<li><img src="/img/maven/step3.2.bmp" alt="image" /><br /></li>
+<li><img src="/img/maven/step3.3.bmp" alt="image" /><br /></li>
+</ul>
     </div>
 
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">olOwOlo</span>
+    <span class="item-content">PattyForu</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -280,10 +544,7 @@ right text
   
 </div>
 <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/maven/">maven</a>
-          <a href="/tags/spring/">spring</a>
-          </div>
+      
       <nav class="post-nav">
         
         
@@ -316,8 +577,7 @@ right text
       <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
       <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
       <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
-      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="http://example.org/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
@@ -330,7 +590,11 @@ right text
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
-  
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
 
   <span class="copyright-year">
     &copy; 
@@ -339,7 +603,7 @@ right text
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">olOwOlo</span>
+    <span class="author">PattyForu</span>
   </span>
 </div>
     </footer>
