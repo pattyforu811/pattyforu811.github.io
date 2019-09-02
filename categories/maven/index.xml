@@ -1,54 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>maven on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/categories/maven/</link>
-    <description>Recent content in maven on Even - A super concise theme for Hugo</description>
+    <title>maven on Patty</title>
+    <link>http://example.org/categories/maven/</link>
+    <description>Recent content in maven on Patty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Aug 2019 10:40:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Aug 2019 15:42:01 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/maven/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/categories/maven/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Maven</title>
-      <link>http://localhost:1313/post/maven/</link>
-      <pubDate>Fri, 30 Aug 2019 10:40:08 +0800</pubDate>
+      <link>http://example.org/post/maven/</link>
+      <pubDate>Fri, 30 Aug 2019 15:42:01 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/maven/</guid>
-      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;code&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;i&amp;rsquo;m title&lt;/p&gt;
-
-&lt;p&gt;biu biu biu&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&#34;admonition note&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;I&amp;#39;m title!&lt;/p&gt;
-  
-biu biu biu.
-
-&lt;details class=&#34;admonition note&#34;&gt;&lt;summary class=&#34;admonition-title&#34;&gt;note&lt;/summary&gt;
-  &lt;p&gt;biu biu biu.&lt;/p&gt;
-
-&lt;/details&gt;
-
-
-&lt;/div&gt;
-
-&lt;div class=&#39;align-right&#39;&gt;
-  
-## right
-right text
-
-&lt;/div&gt;</description>
+      <guid>http://example.org/post/maven/</guid>
+      <description>&lt;p&gt;软件项目管理工具的安装和使用&lt;/p&gt;</description>
     </item>
     
   </channel>

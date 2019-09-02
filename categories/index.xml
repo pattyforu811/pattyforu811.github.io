@@ -6,9 +6,37 @@
     <description>Recent content in Categories on Patty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Mon, 02 Sep 2019 17:58:46 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sprig</title>
+      <link>http://example.org/categories/sprig/</link>
+      <pubDate>Mon, 02 Sep 2019 17:58:46 +0800</pubDate>
+      
+      <guid>http://example.org/categories/sprig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spring</title>
+      <link>http://example.org/categories/spring/</link>
+      <pubDate>Mon, 02 Sep 2019 15:34:49 +0800</pubDate>
+      
+      <guid>http://example.org/categories/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>maven</title>
+      <link>http://example.org/categories/maven/</link>
+      <pubDate>Fri, 30 Aug 2019 15:42:01 +0800</pubDate>
+      
+      <guid>http://example.org/categories/maven/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

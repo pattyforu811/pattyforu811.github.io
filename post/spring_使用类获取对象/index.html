@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Archive - Patty</title>
+  <title>Spring_使用类获取对象 - Patty</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="PattyForu" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="PattyForu" /><meta name="description" content="使用ApplicationContext/BeanFactory实现类创建ioc容器，并获取Bean对象
+" /><meta name="keywords" content="ApplicationContext, Bean, Sprig" />
 
 
 
@@ -26,9 +27,7 @@
 <meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
 
 
-<link rel="canonical" href="http://example.org/post/" />
-  <link href="http://example.org/post/index.xml" rel="alternate" type="application/rss+xml" title="Patty" />
-  <link href="http://example.org/post/index.xml" rel="feed" type="application/rss+xml" title="Patty" />
+<link rel="canonical" href="http://example.org/post/spring_%E4%BD%BF%E7%94%A8%E7%B1%BB%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,18 +39,32 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://example.org/post/" />
+<meta property="og:title" content="Spring_使用类获取对象" />
+<meta property="og:description" content="使用ApplicationContext/BeanFactory实现类创建ioc容器，并获取Bean对象
 
-<meta property="og:updated_time" content="2019-09-02T17:58:46+08:00" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Hugo theme even example site.">
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/post/spring_%E4%BD%BF%E7%94%A8%E7%B1%BB%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1/" />
+<meta property="article:published_time" content="2019-09-02T17:58:46+08:00" />
+<meta property="article:modified_time" content="2019-09-02T17:58:46+08:00" />
+<meta itemprop="name" content="Spring_使用类获取对象">
+<meta itemprop="description" content="使用ApplicationContext/BeanFactory实现类创建ioc容器，并获取Bean对象
 
+">
+
+
+<meta itemprop="datePublished" content="2019-09-02T17:58:46&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-02T17:58:46&#43;08:00" />
+<meta itemprop="wordCount" content="431">
+
+
+
+<meta itemprop="keywords" content="Sprig," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta name="twitter:title" content="Spring_使用类获取对象"/>
+<meta name="twitter:description" content="使用ApplicationContext/BeanFactory实现类创建ioc容器，并获取Bean对象
+
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -111,78 +124,133 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-        5 Posts In Total
-      </span>
-    </div>
-      <div class="collection-title">
-        <h2 class="archive-year">2019</h2>
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Spring_使用类获取对象</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-02 </span>
+        <div class="post-category">
+            <a href="/categories/sprig/"> Sprig </a>
+            </div>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
+    </header>
 
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-02
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/spring_%E4%BD%BF%E7%94%A8%E7%B1%BB%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1/" class="archive-post-link">
-          Spring_使用类获取对象
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-02
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/spring_xml%E9%85%8D%E7%BD%AE/" class="archive-post-link">
-          Spring_Xml配置
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        08-31
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/spring_ioc%E5%8E%9F%E7%90%86/" class="archive-post-link">
-          Spring_ioc原理
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        08-31
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/spring_%E7%A8%8B%E5%BA%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E8%80%A6%E5%90%88%E9%97%AE%E9%A2%98/" class="archive-post-link">
-          Spring_程序之间的耦合问题
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        08-30
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/maven/" class="archive-post-link">
-          Maven
-        </a>
-      </span>
-    </div></section>
-
-<nav class="pagination">
-  
-  
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#applicationcontext">ApplicationContext:</a>
+<ul>
+<li><a href="#applicationcontext实现类">ApplicationContext实现类：</a></li>
+</ul></li>
+<li><a href="#beanfactory">BeanFactory:</a></li>
+</ul></li>
+</ul>
 </nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>使用ApplicationContext/BeanFactory实现类创建ioc容器，并获取Bean对象</p>
+
+<hr />
+
+<h2 id="applicationcontext">ApplicationContext:</h2>
+
+<p>在创建ioc容器时，创建对象采取的方式采用的是立即加载的方式，只要一读取配置文件，马上就会创建配置文件中配置的对象，Bean对象是单例的</p>
+
+<h3 id="applicationcontext实现类">ApplicationContext实现类：</h3>
+
+<p>ClassPathXmlApplicationContext：
+    加载类路径下的配置文件(Bean.xml在classes下)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">//先获取spring的ioc容器对象
+ApplicationContext ac = new ClassPathXmlApplicationContext(&#34;bean.xml&#34;);
+//并且根据id获取对象 
+UserDao dao = ac.getBean(&#34;userDao&#34;, UserDao.class);</pre></td></tr></table>
+</div>
+</div>
+<p>FileSystemXmlApplicationContext:
+    加载磁盘任意路径下的配置文件 (Bean.xml在电脑的任意位置)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ApplicationContext ac = new FileSystemXmlApplicationContext(&#34;C:\\Users\\Desktop\\bean.xml&#34;);
+//并且根据id获取对象 
+UserDao dao = ac.getBean(&#34;userDao&#34;, UserDao.class);</pre></td></tr></table>
+</div>
+</div>
+<p>AnnotationConfigApplicationContext：
+    读取注解创建容器</p>
+
+<h2 id="beanfactory">BeanFactory:</h2>
+
+<p>在创建ioc容器时，创建对象采取的方式是采用延迟加载的方式，什么时候根据id获取对象了，什么时候才真正的创建对象，Bean对象是多例的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">BeanFactory bf = new XmlBeanFactory(new ClassPathResource(&#34;bean.xml&#34;));
+UserService serivce =(UserService)bf.getBean(&#34;userService&#34;);
+System.out.println(serivce);</pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">PattyForu</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-09-02
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/sprig/">Sprig</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/spring_xml%E9%85%8D%E7%BD%AE/">
+            <span class="next-text nav-default">Spring_Xml配置</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+  
+  
+
+  
 
       </div>
     </main>

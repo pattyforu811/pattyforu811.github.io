@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>spring on Patty</title>
-    <link>http://example.org/tags/spring/</link>
+    <link>http://example.org/categories/spring/</link>
     <description>Recent content in spring on Patty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 02 Sep 2019 15:34:49 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/categories/spring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <description>&lt;p&gt;spring 的纯xml配置&lt;/p&gt;
 
 &lt;hr /&gt;</description>
-    </item>
-    
-    <item>
-      <title>Spring_ioc原理</title>
-      <link>http://example.org/post/spring_ioc%E5%8E%9F%E7%90%86/</link>
-      <pubDate>Sat, 31 Aug 2019 08:04:23 +0800</pubDate>
-      
-      <guid>http://example.org/post/spring_ioc%E5%8E%9F%E7%90%86/</guid>
-      <description>&lt;p&gt;把创建对象的事交给bean对象的工厂&lt;/p&gt;</description>
     </item>
     
     <item>

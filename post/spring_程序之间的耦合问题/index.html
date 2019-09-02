@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Maven - Patty</title>
+  <title>Spring_程序之间的耦合问题 - Patty</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="PattyForu" /><meta name="description" content="maven quick start" /><meta name="keywords" content="maven" />
+<meta name="author" content="PattyForu" /><meta name="description" content="代码耦合的原理分析
+" /><meta name="keywords" content="耦合，spring, 解耦" />
 
 
 
@@ -26,7 +27,7 @@
 <meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
 
 
-<link rel="canonical" href="http://example.org/post/maven/" />
+<link rel="canonical" href="http://example.org/post/spring_%E7%A8%8B%E5%BA%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E8%80%A6%E5%90%88%E9%97%AE%E9%A2%98/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,26 +39,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Maven" />
-<meta property="og:description" content="maven quick start" />
+<meta property="og:title" content="Spring_程序之间的耦合问题" />
+<meta property="og:description" content="代码耦合的原理分析" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/post/maven/" />
-<meta property="article:published_time" content="2019-08-30T15:42:01+08:00" />
-<meta property="article:modified_time" content="2019-08-30T15:42:01+08:00" />
-<meta itemprop="name" content="Maven">
-<meta itemprop="description" content="maven quick start">
+<meta property="og:url" content="http://example.org/post/spring_%E7%A8%8B%E5%BA%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E8%80%A6%E5%90%88%E9%97%AE%E9%A2%98/" />
+<meta property="article:published_time" content="2019-08-31T06:57:24+08:00" />
+<meta property="article:modified_time" content="2019-08-31T06:57:24+08:00" />
+<meta itemprop="name" content="Spring_程序之间的耦合问题">
+<meta itemprop="description" content="代码耦合的原理分析">
 
 
-<meta itemprop="datePublished" content="2019-08-30T15:42:01&#43;08:00" />
-<meta itemprop="dateModified" content="2019-08-30T15:42:01&#43;08:00" />
-<meta itemprop="wordCount" content="399">
+<meta itemprop="datePublished" content="2019-08-31T06:57:24&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-31T06:57:24&#43;08:00" />
+<meta itemprop="wordCount" content="489">
 
 
 
-<meta itemprop="keywords" content="Maven," />
+<meta itemprop="keywords" content="spring," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Maven"/>
-<meta name="twitter:description" content="maven quick start"/>
+<meta name="twitter:title" content="Spring_程序之间的耦合问题"/>
+<meta name="twitter:description" content="代码耦合的原理分析"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -120,12 +121,12 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Maven</h1>
+      <h1 class="post-title">Spring_程序之间的耦合问题</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-08-30 </span>
+        <span class="post-time"> 2019-08-31 </span>
         <div class="post-category">
-            <a href="/categories/maven/"> maven </a>
+            <a href="/categories/spring/"> spring </a>
             </div>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -133,72 +134,48 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content">
+  <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
 <li>
 <ul>
-<li><a href="#step-1-下载">Step 1: 下载</a></li>
-<li><a href="#step-2-配置参数">Step 2: 配置参数</a></li>
-<li><a href="#step-3-idea创建maven工程">Step 3: idea创建maven工程</a></li>
+<li><a href="#问题">问题</a></li>
 </ul></li>
 </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>软件项目管理工具的安装和使用</p>
+      <p>代码耦合的原理分析</p>
 
 <hr />
 
-<h2 id="step-1-下载">Step 1: 下载</h2>
+<h2 id="问题">问题</h2>
 
-<p>官网下载地址:
-(<a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a>)</p>
+<p>程序之间的耦合度越高，程序的独门性斥越差</p>
 
-<p><img src="/img/maven/step1.bmp" alt="image" /></p>
+<p>耦合：程序之间的依赖关系（类与类之间）<br />
+解耦：降低程序之间的依赖关系</p>
 
-<h2 id="step-2-配置参数">Step 2: 配置参数</h2>
+<p>实际开发中：</p>
 
-<p>解压后打开conf/setting.xml</p>
+<ol>
+<li>编译时期不依赖，运行时期才依赖
+<br /></li>
+</ol>
 
-<ul>
-<li><p>需要配置本地仓库（jar包下载存放位置）</p>
+<p>解耦的思路：</p>
+
+<ol>
+<li>使用反射创建对象，而避免直接使用new关键字</li>
+<li>通过把连接信息放到一个单独的配置文件中，程序中只需要读取配置文件来获取要创建的对象全类名</li>
+</ol>
+
+<p>jdbc案例:
+registerDriver</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;localRepository&gt;</span>E:\maven\repository<span class="nt">&lt;/localRepository&gt;</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>（其中E:\maven\repository是自己指定的仓库文件夹位置）</p></li>
-
-<li><p>配置远程仓库的镜像。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;mirror&gt;</span>
-	<span class="nt">&lt;id&gt;</span>nexus<span class="nt">&lt;/id&gt;</span>
-	<span class="nt">&lt;mirrorOf&gt;</span>*<span class="nt">&lt;/mirrorOf&gt;</span>
-	<span class="nt">&lt;name&gt;</span>Nexus aliyun<span class="nt">&lt;/name&gt;</span>
-	<span class="nt">&lt;url&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span class="nt">&lt;/url&gt;</span>
-<span class="nt">&lt;/mirror&gt;</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>我们可以在pom中定义一个下载组件的时候所使用的远程仓库。但是有时候这个远程仓库会比较忙，所以这个时候人们就想着给它创建镜像以缓解远程仓库的压力，也就是说会把对远程仓库的请求转换到对其镜像地址的请求</p></li>
-
-<li><p>指定jdk的版本（可选）</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -210,39 +187,31 @@
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;profile&gt;</span>   
-	<span class="nt">&lt;id&gt;</span>jdk-1.8<span class="nt">&lt;/id&gt;</span>   
-	<span class="nt">&lt;activation&gt;</span>   
-		<span class="nt">&lt;activeByDefault&gt;</span>true<span class="nt">&lt;/activeByDefault&gt;</span>   
-		<span class="nt">&lt;jdk&gt;</span>1.8<span class="nt">&lt;/jdk&gt;</span>   
-	<span class="nt">&lt;/activation&gt;</span>   
-	<span class="nt">&lt;properties&gt;</span>   
-		<span class="nt">&lt;maven.compiler.source&gt;</span>1.8<span class="nt">&lt;/maven.compiler.source&gt;</span>   
-		<span class="nt">&lt;maven.compiler.target&gt;</span>1.8<span class="nt">&lt;/maven.compiler.target&gt;</span>   
-		<span class="nt">&lt;maven.compiler.compilerVersion&gt;</span>1.8<span class="nt">&lt;/maven.compiler.compilerVersion&gt;</span>   
-	<span class="nt">&lt;/properties&gt;</span>   
-<span class="nt">&lt;/profile&gt;</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="nf">Exception</span> <span class="p">{</span>
+		<span class="c1">//1.注册驱动
+</span><span class="c1"></span>		<span class="c1">//DriverManager.registerDriver(new com.mysql.jdbc.Driver());//编译时期依赖了
+</span><span class="c1"></span>		<span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&#34;com.mysql.jdbc.Driver&#34;</span><span class="p">);</span><span class="c1">//独立
+</span><span class="c1"></span>		<span class="c1">//2.获取连接
+</span><span class="c1"></span>		<span class="n">Connection</span> <span class="nf">conn</span> <span class="o">=</span> <span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="s">&#34;jdbc:mysql:///&#34;</span><span class="p">,</span> <span class="s">&#34;root&#34;</span><span class="p">,</span> <span class="s">&#34;root&#34;</span><span class="p">);</span>
+		<span class="c1">//3.获取操作数据
+</span><span class="c1"></span>		<span class="n">PreparedStatement</span> <span class="nf">ps</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="s">&#34;SELECT * FROM user&#34;</span><span class="p">);</span>
+		<span class="c1">//4.执行sql,得到结果集
+</span><span class="c1"></span>		<span class="n">ResultSet</span> <span class="nf">rs</span> <span class="o">=</span> <span class="n">ps</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">();</span>
+		<span class="c1">//5.遍历结果集
+</span><span class="c1"></span>		<span class="k">while</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">()){}</span>
+		<span class="c1">//6.释放资源
+</span><span class="c1"></span>		<span class="n">conn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+	<span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>如果开发时不用maven进行编译就可以不用配置</p></li>
-</ul>
+<p>DriverManager.registerDriver(new com.mysql.jdbc.Driver());//如果编译时期缺少Driver这个类就会报错</p>
 
-<h2 id="step-3-idea创建maven工程">Step 3: idea创建maven工程</h2>
-
-<p><img src="/img/maven/step3.bmp" alt="image" /></p>
-
-<p><img src="/img/maven/step3.1.bmp" alt="image" /></p>
-
-<p>修改上面2个参数<br />
-1. 第一个参数（-DarchetypeCatalog=internal）可以在不联网的情况下，使用之前下载的插件来构建项目，而不是一定联网构建。<br />
-2. 确认自己选择的jdk版本<br />
-<img src="/img/maven/step3.2.bmp" alt="image" /></p>
-
-<p><img src="/img/maven/step3.3.bmp" alt="image" /></p>
-
-<!--more-->
+<p>Class.forName(&ldquo;com.mysql.jdbc.Driver&rdquo;);//Driver在这里只是一个字符串，编译时不依赖这个类，在运行时才会用到</p>
     </div>
 
     <div class="post-copyright">
@@ -253,7 +222,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2019-08-30
+        2019-08-31
         
     </span>
   </p>
@@ -262,15 +231,19 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/maven/">Maven</a>
+          <a href="/tags/spring/">spring</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/spring_%E7%A8%8B%E5%BA%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E8%80%A6%E5%90%88%E9%97%AE%E9%A2%98/">
+        <a class="prev" href="/post/spring_ioc%E5%8E%9F%E7%90%86/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Spring_程序之间的耦合问题</span>
+            <span class="prev-text nav-default">Spring_ioc原理</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
-        
+        <a class="next" href="/post/maven/">
+            <span class="next-text nav-default">Maven</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
       </nav>
     </footer>
   </article>
@@ -339,13 +312,6 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js" integrity="sha256-jwCP0NAdCBloaIWTWHmW4i3snUNMHUNO+jr9rYd2iOI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.locales.min.js" integrity="sha256-ZwofwC1Lf/faQCzN7nZtfijVV6hSwxjQMwXL4gn9qU8=" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
-    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
-    timeago().render(document.querySelectorAll('.timeago'), languageCode);
-    timeago.cancel();  
-  </script>
 <script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
 
 
