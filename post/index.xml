@@ -6,10 +6,199 @@
     <description>Recent content in Posts on Patty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Sep 2019 17:58:46 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2019 22:16:21 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SpringMVC_Interceptor</title>
+      <link>http://example.org/post/springmvc_interceptor/</link>
+      <pubDate>Tue, 08 Oct 2019 22:16:21 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_interceptor/</guid>
+      <description>&lt;p&gt;Spring MVC 的 Interceptor 处理器拦截器的使用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_Exception</title>
+      <link>http://example.org/post/springmvc_exception/</link>
+      <pubDate>Tue, 08 Oct 2019 21:45:50 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_exception/</guid>
+      <description>&lt;p&gt;系统的 dao、service、controller 出现异常，都通过 throws Exception 向上抛出，最后由 springmvc 前端控制器交由异常处理器进行异常处理，不然异常会直接出现有jsp页面，这样对用户不友好&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_文件上传</title>
+      <link>http://example.org/post/springmvc_%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</link>
+      <pubDate>Tue, 08 Oct 2019 09:05:09 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_响应数据和结果视图</title>
+      <link>http://example.org/post/springmvc_%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/</link>
+      <pubDate>Fri, 04 Oct 2019 20:49:04 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_编程风格</title>
+      <link>http://example.org/post/springmvc_%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/</link>
+      <pubDate>Wed, 02 Oct 2019 22:02:17 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/</guid>
+      <description>&lt;p&gt;ANT风格和rest风格&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mybatis Spring整合</title>
+      <link>http://example.org/post/mybatis-spring%E6%95%B4%E5%90%88/</link>
+      <pubDate>Wed, 02 Oct 2019 08:16:55 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis-spring%E6%95%B4%E5%90%88/</guid>
+      <description>&lt;p&gt;使用MyBatis提供的整合包mybatis-spring, 和spring框架进行整合&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyBatis_分页插件</title>
+      <link>http://example.org/post/mybatis_%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Tue, 01 Oct 2019 07:47:45 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/</guid>
+      <description>&lt;p&gt;使用PageHelper进行MyBatis的分页管理&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyBatis_逆向工程</title>
+      <link>http://example.org/post/mybatis_%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Mon, 30 Sep 2019 10:11:43 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</guid>
+      <description>&lt;p&gt;使用generator 逆向生成代码&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyBatis_mapper文件</title>
+      <link>http://example.org/post/mybatis_mapper%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Sat, 28 Sep 2019 17:03:42 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_mapper%E6%96%87%E4%BB%B6/</guid>
+      <description>&lt;p&gt;mapper文件的配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mybatis_配置详解</title>
+      <link>http://example.org/post/mybatis_%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sat, 14 Sep 2019 18:05:37 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;p&gt;mybatis的全局配置文件的介绍&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyBatis_快速入门</title>
+      <link>http://example.org/post/mybatis_%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Fri, 13 Sep 2019 18:41:24 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid>
+      <description>&lt;p&gt;Mybatis的快速入门&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop事务注解配置</title>
+      <link>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 13 Sep 2019 14:41:29 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用注解配置aop事务&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop事务xml配置</title>
+      <link>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1xml%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 12 Sep 2019 09:55:09 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1xml%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;Spring_aop事务配置式的xml配置,使用Spring提供好的事务通知进行配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_知识点</title>
+      <link>http://example.org/post/springmvc_%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+      <pubDate>Mon, 09 Sep 2019 08:34:18 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring_aop注解配置</title>
+      <link>http://example.org/post/spring_aop%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 08 Sep 2019 18:15:38 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用xml和注解配置aop&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop的xml配置</title>
+      <link>http://example.org/post/spring_aop%E7%9A%84xml%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 07 Sep 2019 11:51:31 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E7%9A%84xml%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;Spring aop的xml配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java_自定义连接池</title>
+      <link>http://example.org/post/java_%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%9E%E6%8E%A5%E6%B1%A0/</link>
+      <pubDate>Sat, 07 Sep 2019 10:53:23 +0800</pubDate>
+      
+      <guid>http://example.org/post/java_%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%9E%E6%8E%A5%E6%B1%A0/</guid>
+      <description>&lt;p&gt;手写简单的连接池&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_动态代理</title>
+      <link>http://example.org/post/spring_%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Sat, 07 Sep 2019 08:23:29 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</guid>
+      <description>&lt;p&gt;jdk动态代理和cglib动态代理&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_纯注解配置</title>
+      <link>http://example.org/post/spring_%E7%BA%AF%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 06 Sep 2019 16:06:10 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_%E7%BA%AF%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用纯注解的配置类&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_快速入门</title>
+      <link>http://example.org/post/springmvc_%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Thu, 05 Sep 2019 10:00:14 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid>
+      <description>&lt;p&gt;SpringMVC介绍和使用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_ioc注解配置</title>
+      <link>http://example.org/post/spring_%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 03 Sep 2019 08:46:46 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用Annotation配置Bean对象&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Spring_使用类获取对象</title>
@@ -17,20 +206,16 @@
       <pubDate>Mon, 02 Sep 2019 17:58:46 +0800</pubDate>
       
       <guid>http://example.org/post/spring_%E4%BD%BF%E7%94%A8%E7%B1%BB%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1/</guid>
-      <description>&lt;p&gt;使用ApplicationContext/BeanFactory实现类创建ioc容器，并获取Bean对象&lt;/p&gt;
-
-&lt;hr /&gt;</description>
+      <description>&lt;p&gt;使用ApplicationContext/BeanFactory实现类创建ioc容器，并获取Bean对象&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Spring_Xml配置</title>
-      <link>http://example.org/post/spring_xml%E9%85%8D%E7%BD%AE/</link>
+      <title>Spring_ioc的xml配置</title>
+      <link>http://example.org/post/spring_ioc%E7%9A%84xml%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 02 Sep 2019 15:34:49 +0800</pubDate>
       
-      <guid>http://example.org/post/spring_xml%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;p&gt;spring 的纯xml配置&lt;/p&gt;
-
-&lt;hr /&gt;</description>
+      <guid>http://example.org/post/spring_ioc%E7%9A%84xml%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;springioc的纯xml配置&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -52,11 +237,11 @@
     </item>
     
     <item>
-      <title>Maven</title>
-      <link>http://example.org/post/maven/</link>
+      <title>Maven_maven入门</title>
+      <link>http://example.org/post/maven_maven%E5%85%A5%E9%97%A8/</link>
       <pubDate>Fri, 30 Aug 2019 15:42:01 +0800</pubDate>
       
-      <guid>http://example.org/post/maven/</guid>
+      <guid>http://example.org/post/maven_maven%E5%85%A5%E9%97%A8/</guid>
       <description>&lt;p&gt;软件项目管理工具的安装和使用&lt;/p&gt;</description>
     </item>
     

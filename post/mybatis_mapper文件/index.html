@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MyBatis_mapper文件 - Patty</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="PattyForu" /><meta name="description" content="mapper文件的配置
+" /><meta name="keywords" content="Mapper, Mybatis" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://example.org/post/mybatis_mapper%E6%96%87%E4%BB%B6/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="MyBatis_mapper文件" />
+<meta property="og:description" content="mapper文件的配置" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/post/mybatis_mapper%E6%96%87%E4%BB%B6/" />
+<meta property="article:published_time" content="2019-09-28T17:03:42+08:00" />
+<meta property="article:modified_time" content="2019-09-28T17:03:42+08:00" />
+<meta itemprop="name" content="MyBatis_mapper文件">
+<meta itemprop="description" content="mapper文件的配置">
+
+
+<meta itemprop="datePublished" content="2019-09-28T17:03:42&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-28T17:03:42&#43;08:00" />
+<meta itemprop="wordCount" content="6745">
+
+
+
+<meta itemprop="keywords" content="Mapper,Mybatis," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MyBatis_mapper文件"/>
+<meta name="twitter:description" content="mapper文件的配置"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">PattyForu</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">PattyForu</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">MyBatis_mapper文件</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-28 </span>
+        <div class="post-category">
+            <a href="/categories/mybatis/"> Mybatis </a>
+            </div>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#mapper配置文件">mapper配置文件</a>
+<ul>
+<li><a href="#增删改">增删改</a></li>
+<li><a href="#数据库新增获取主键的id">数据库新增获取主键的id</a>
+<ul>
+<li><a href="#mysql">mysql</a></li>
+<li><a href="#oracle">oracle</a></li>
+</ul></li>
+<li><a href="#参数绑定">参数绑定</a>
+<ul>
+<li><a href="#总结">总结：</a></li>
+</ul></li>
+<li><a href="#和-的区别">$和#的区别</a></li>
+<li><a href="#返回值问题">返回值问题</a></li>
+<li><a href="#自定义封装类型">自定义封装类型</a></li>
+<li><a href="#resultmap对象之间的级联关系">resultMap对象之间的级联关系</a>
+<ul>
+<li><a href="#一对一-employee表中对应一个department">一对一:employee表中对应一个Department</a>
+<ul>
+<li><a href="#对象-属性">对象.属性</a></li>
+<li><a href="#association">association</a></li>
+</ul></li>
+<li><a href="#一对多-department表中对应多个employee">一对多: Department表中对应多个employee</a>
+<ul>
+<li><a href="#collection">collection</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#鉴别器">鉴别器</a></li>
+<li><a href="#懒加载">懒加载</a></li>
+<li><a href="#内置参数">内置参数</a></li>
+<li><a href="#重用sql">重用sql</a></li>
+<li><a href="#缓存">缓存</a>
+<ul>
+<li><a href="#一级缓存">一级缓存</a></li>
+<li><a href="#二级缓存">二级缓存</a>
+<ul>
+<li><a href="#cache标签说明">cache标签说明</a></li>
+<li><a href="#mapper-配置">mapper 配置</a></li>
+</ul></li>
+<li><a href="#总结-1">总结</a></li>
+</ul></li>
+<li><a href="#第三方缓存">第三方缓存</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>mapper文件的配置</p>
+
+<hr />
+
+<h1 id="mapper配置文件">mapper配置文件</h1>
+
+<h2 id="增删改">增删改</h2>
+
+<ul>
+<li>mybatis允许增删改直接定义查询的类型返回值：Integer Long Boolean</li>
+<li>增删改返回的是影响的行数，如果是Boolean，大于0则返回true ，如果是等于0就是false</li>
+<li>mapper映射文件对应的标签不需要加上返回值类型属性</li>
+<li>如果sqlSessionFactory.openSession()，需要手动提交事务</li>
+<li>如果sqlSessionFactory.openSession(true);代表自动提交事务</li>
+</ul>
+
+<p>Dao接口</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">dao</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nf">com</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">domain</span><span class="p">.</span><span class="na">Employee</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="nf">interface</span> <span class="n">EmployeeMapper</span> <span class="p">{</span>
+
+    <span class="cm">/**
+</span><span class="cm">     * 新增保存方法
+</span><span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">void</span> <span class="n">save</span><span class="p">(</span><span class="n">Employee</span> <span class="nf">emp</span><span class="p">);</span>
+	
+	    <span class="cm">/**
+</span><span class="cm">     * 删除方法
+</span><span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Integer</span> <span class="n">delete</span><span class="p">(</span><span class="n">Integer</span> <span class="nf">id</span><span class="p">);</span>
+
+    <span class="cm">/**
+</span><span class="cm">     * 修改方法
+</span><span class="cm">
+</span><span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">boolean</span> <span class="n">update</span><span class="p">(</span><span class="n">Employee</span> <span class="nf">emp</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>mapper文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE mapper
+</span><span class="cp">        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
+</span><span class="cp">        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
+<span class="c">&lt;!-- 通过 namespace属性动态的将xml文件和dao接口进行绑定--&gt;</span>
+<span class="nt">&lt;mapper</span> <span class="na">namespace=</span><span class="s">&#34;com.pattyforu.dao.EmployeeMapper&#34;</span><span class="nt">&gt;</span>
+<span class="c">&lt;!--#{}中内容的写法：
+</span><span class="c">        由于我们保存方法的参数是 一个 User 对象，此处要写 User 对象中的属性名称。
+</span><span class="c">        它用的是 ognl 表达式。
+</span><span class="c">    ognl 表达式：
+</span><span class="c">        它是 apache 提供的一种表达式语言，全称是：Object Graphic Navigation Language 对象图导航语言
+</span><span class="c">        语法格式就是使用 #{对象.对象}的方式
+</span><span class="c">
+</span><span class="c">        #{user.username}它会先去找 user 对象，然后在 user 对象中找到 username 属性，并调用getUsername()方法把值取出来。
+</span><span class="c">        但是我们在 parameterType 属性上指定了实体类名称，所以可以省略 user.而直接写 username。--&gt;</span>
+    <span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&#34;save&#34;</span> <span class="na">parameterType=</span><span class="s">&#34;employee&#34;</span><span class="nt">&gt;</span>
+        insert into employee(emp_name,sex,email) values(#{empName},#{sex},#{email})
+    <span class="nt">&lt;/insert&gt;</span>
+
+    <span class="nt">&lt;delete</span> <span class="na">id=</span><span class="s">&#34;delete&#34;</span> <span class="na">parameterType=</span><span class="s">&#34;integer&#34;</span><span class="nt">&gt;</span>
+        delete from employee where id=#{id}
+    <span class="nt">&lt;/delete&gt;</span>
+
+    <span class="nt">&lt;update</span> <span class="na">id=</span><span class="s">&#34;update&#34;</span> <span class="na">parameterType=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+        update employee set emp_name = #{empName}, sex=#{sex}, email=#{email} where id=#{id}
+    <span class="nt">&lt;/update&gt;</span>
+<span class="nt">&lt;/mapper&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="数据库新增获取主键的id">数据库新增获取主键的id</h2>
+
+<h3 id="mysql">mysql</h3>
+
+<p>　　mybatis支持主键自增，自增主键的值使用原生的jdbc getGeneratedKey()</p>
+
+<p>　　配置:<br />
+　　useGeneratedKeys=&ldquo;true&rdquo;:告诉mybatis使用自增主键生成策略<br />
+　　keyProperty=&ldquo;id&rdquo; :主键值赋值给Employee表的id</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&#34;save&#34;</span> <span class="na">parameterType=</span><span class="s">&#34;employee&#34;</span> <span class="na">useGeneratedKeys=</span><span class="s">&#34;true&#34;</span> <span class="na">keyProperty=</span><span class="s">&#34;id&#34;</span><span class="nt">&gt;</span>
+	insert into employee(emp_name,sex,email) values(#{empName},#{sex},#{email})
+<span class="nt">&lt;/insert&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="oracle">oracle</h3>
+
+<p>　　oracle数据库不支持自增，oracle使用序列来完成模拟自增<br />
+　　每次插入的数据的主键值是从序列中拿到的值</p>
+
+<p>思路1:<br />
+　　先在oracle里创建序列,然后在mybatis中先从序列中查询出序列号,使用查找出的序列号作为插入数据时的主键id</p>
+
+<p>创建序列</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">create</span> <span class="n">sequence</span> <span class="n">s_employee_id</span>
+<span class="k">minvalue</span> <span class="mi">1</span>
+<span class="k">maxvalue</span> <span class="mi">9999</span>
+<span class="k">start</span> <span class="k">with</span> <span class="mi">1</span>
+<span class="k">increment</span> <span class="k">by</span> <span class="mi">1</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>编写查询主键的sql语句 :<br />
+　　eyProperty: 查出主键值封装给java对象的哪个属性<br />
+　　resultType: 查出的数据返回值类型<br />
+　　order=&ldquo;BEFORE&rdquo;: 先运行selectKey查询id的sql，查询出id值封装给java对象的id属性，再运行插入的sql，就可以从对象中取出id属性所对应的值</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&#34;save&#34;</span> <span class="na">parameterType=</span><span class="s">&#34;Employee&#34;</span> <span class="na">databaseId=</span><span class="s">&#34;oracle&#34;</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;selectKey</span> <span class="na">keyProperty=</span><span class="s">&#34;id&#34;</span> <span class="na">order=</span><span class="s">&#34;BEFORE&#34;</span> <span class="na">resultType=</span><span class="s">&#34;integer&#34;</span><span class="nt">&gt;</span>
+		select s_employee_id.nextval from dual
+	<span class="nt">&lt;/selectKey&gt;</span>
+	insert into employee(id,name,sex,email)values(#{id},#{empName},#{sex},#{email})
+<span class="nt">&lt;/insert&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>思路2:<br />
+　　order=&ldquo;AFTER&rdquo;:先运行插入的sql，从序列中取出新值做为id，再运行selectKey查询id的，设置到对象中的id属性中去</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&#34;save&#34;</span> <span class="na">parameterType=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span> <span class="na">databaseId=</span><span class="s">&#34;oracle&#34;</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;selectKey</span> <span class="na">keyProperty=</span><span class="s">&#34;id&#34;</span> <span class="na">order=</span><span class="s">&#34;AFTER&#34;</span> <span class="na">resultType=</span><span class="s">&#34;integer&#34;</span><span class="nt">&gt;</span>
+		select s_employee_id.currval from dual
+	<span class="nt">&lt;/selectKey&gt;</span>
+	insert into employee(id,name,sex,email)values(s_employee_id.nextval,#{empName},#{sex},#{email})
+<span class="nt">&lt;/insert&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="参数绑定">参数绑定</h2>
+
+<ol>
+<li><p>接口方法传递一个参数
+在xml文件中取出值：#{参数名}&ndash;&gt;参数值<br />
+如果只传递单个参数，mybatis不会做任何的特殊处理，并且方法参数名和#{参数名}可以不一致</p></li>
+
+<li><p>多个参数
+当方法传入多个参数时，mybatis会做特殊的处理，多个参数封装成一个map集合，
+而#{}是从map集合中获取指定的key的值<br />
+生成的map集合 key规则：param1,param2&hellip;paramN</p>
+
+<blockquote>
+<p>#{id} &mdash;&gt; 从map中获取key为id所对应的值<br />
+#{param1} &ndash;&gt; 从map中获取key为param1所对应的值，值是调用方法传递来的实参</p>
+</blockquote>
+
+<p>mybatis支持命名参数：<br />
+　　自己指定key的名称，使用方式：<br />
+　　在方法定义的过程中，给参数通过@Param(&ldquo;&rdquo;)指定key的名称</p></li>
+
+<li><p>如果参数较多，可以传入实体对象</p></li>
+
+<li><p>如果参数较多，且多个参数不是已有的对象，那么可以传入map</p>
+
+<blockquote>
+<p>#{key} &ndash;&gt; 取出map中key所对应的值</p>
+</blockquote>
+
+<p>例子:</p>
+
+<blockquote>
+<ul>
+<li><p>public Employee getEmp( @Param(&ldquo;id&rdquo;)Integer id , String empName );<br />
+　　对应的取值<br />
+　　id&mdash;-&gt;#{id} #{param1}<br />
+　　empName&mdash;&gt;#{param2}</p></li>
+
+<li><p>public Employee getEmp(Integer id,Employee emp);<br />
+　　id&mdash;&gt;#{param1}<br />
+　　取出emp对象中的empname<br />
+　　empname&mdash;&gt;#{param2.empName}</p></li>
+
+<li><p>public Employee getEmp( Integer id , @Param(&ldquo;emp&rdquo;)Employee emp );<br />
+　　 empname&mdash;&gt;#{emp.empName}</p></li>
+</ul>
+</blockquote></li>
+
+<li><p>如果参数是集合类型
+<code>public Employee getEmpById(List&lt;Integer&gt; ids);</code><br />
+在sql查询的过程中想要取出list中的第一个元素 ,用<code>#{list[0]}</code></p>
+
+<p><strong>注意：</strong><br />
+　　如果参数传递的Collection（List,Set）类型或者数组类型，mybatis也会进行特殊的处理,
+会将这些传入的集合或者数组封装到map集合中</p></li>
+</ol>
+
+<p>　　　　如果是Collection集合，map中的key对应的是collection(所有的集合都可以使用,包括List)<br />
+　　　　如果是List集合，可以使用key：list<br />
+　　　　如果是数组，可以使用key：array</p>
+
+<h3 id="总结">总结：</h3>
+
+<p>　　参数多个时会封装map集合，为了不混乱，可以使用@Param注解来指定封装map时指定的key，#{key}就可以去取map中的值</p>
+
+<h2 id="和-的区别">$和#的区别</h2>
+
+<p>${}：取出来的值直接拼接在sql语句中，会有安全问题，没有办法防止sql注入<br />
+#{}:以预编译方式，将参数设置到sql语句中，PreparedStratement：可以防止sql注入</p>
+
+<h2 id="返回值问题">返回值问题</h2>
+
+<ol>
+<li><p>如果方法返回的是集合,那么resultType指定的是集合中的元素类型</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- public List&lt;Employee&gt; getEmpByLikeEmpName(String empName); --&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getEmpByLikeEmpName&#34;</span> <span class="na">resultType=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+	select * from employee where emp_name like #{empName}
+<span class="nt">&lt;/select&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>如果方法返回的是map集合</p></li>
+</ol>
+
+<ul>
+<li><p>如果是一条记录保存到map集合中,key就是字段名,value就是字段对应的值</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- public Map&lt;String,Object&gt; getEmpByReturnMap(Integer id); --&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getEmpByReturnMap&#34;</span> <span class="na">resultType=</span><span class="s">&#34;map&#34;</span><span class="nt">&gt;</span>
+	select * from employee where id=#{id}
+<span class="nt">&lt;/select&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>如果是多条记录,则把sql返回的每一条数据都封装成employee对象，key对应的是employee表Integer类型的主键id</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@MapKey</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">)</span><span class="c1">//告诉mybatis查询出来的结果集封装这个map的时候使用的是哪个字段名做为map的key
+</span><span class="c1"></span><span class="kd">public</span> <span class="nf">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">getAllEmpByReturnMap</span><span class="p">();</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getAllEmpByReturnMap&#34;</span> <span class="na">resultType=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span> <span class="nt">&gt;</span>
+select * from employee
+<span class="nt">&lt;/select&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<h2 id="自定义封装类型">自定义封装类型</h2>
+
+<p>自定义某个javabean的封装规则</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml">    <span class="c">&lt;!--type:自定义规则的java类型
+</span><span class="c">		id:唯一的标识
+</span><span class="c">	--&gt;</span>
+    <span class="nt">&lt;resultMap</span> <span class="na">id=</span><span class="s">&#34;IEmp&#34;</span> <span class="na">type=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- 指定主键字段的封装规则
+</span><span class="c">            column:代表从sql数据库中查询出来结果的对应字段名,如果查询时有取别名就是别名
+</span><span class="c">            property:代表指定对应对象的属性名--&gt;</span>
+        <span class="nt">&lt;id</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- 指定普通字段的封装规则 --&gt;</span>
+        <span class="c">&lt;!-- 其余没有指定的字段会自动封装 ，但是推荐只要定义resultMap就建议全部定义好--&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&#34;emp_name&#34;</span> <span class="na">property=</span><span class="s">&#34;empName&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&#34;sex&#34;</span> <span class="na">property=</span><span class="s">&#34;sex&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&#34;email&#34;</span> <span class="na">property=</span><span class="s">&#34;email&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/resultMap&gt;</span>
+
+    <span class="c">&lt;!--public Employee getEmpById(Integer id);--&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getEmpById&#34;</span> <span class="na">parameterType=</span><span class="s">&#34;integer&#34;</span> <span class="na">resultMap=</span><span class="s">&#34;IEmp&#34;</span><span class="nt">&gt;</span>
+        select * from employee where id=#{id}
+    <span class="nt">&lt;/select&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="resultmap对象之间的级联关系">resultMap对象之间的级联关系</h2>
+
+<p>employee.java</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">    <span class="c1">//属性名建议和数据库字段名保持一致
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="nf">Integer</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="nf">String</span> <span class="n">empName</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="nf">String</span> <span class="n">sex</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="nf">String</span> <span class="n">email</span><span class="p">;</span>
+
+    <span class="c1">//一个员工对应一个部门
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="nf">Department</span> <span class="n">dept</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Department.java</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">    <span class="c1">//部门id
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="nf">Integer</span> <span class="n">id</span><span class="p">;</span><span class="c1">//部门id
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="nf">String</span> <span class="n">deptName</span><span class="p">;</span><span class="c1">//部门名称
+</span><span class="c1"></span>
+    <span class="c1">//一个部门对应多个员工
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="nf">List</span><span class="o">&lt;</span><span class="n">Employee</span><span class="o">&gt;</span> <span class="nf">emps</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="一对一-employee表中对应一个department">一对一:employee表中对应一个Department</h3>
+
+<h4 id="对象-属性">对象.属性</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml">    <span class="nt">&lt;resultMap</span> <span class="na">id=</span><span class="s">&#34;emp&#34;</span> <span class="na">type=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;id</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;empName&#34;</span> <span class="na">column=</span><span class="s">&#34;emp_name&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;sex&#34;</span> <span class="na">column=</span><span class="s">&#34;sex&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&#34;email&#34;</span> <span class="na">property=</span><span class="s">&#34;email&#34;</span><span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- 关联查询，级联属性（对象.属性）封装结果集 --&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;dept.id&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;dept.deptName&#34;</span> <span class="na">column=</span><span class="s">&#34;dept_name&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/resultMap&gt;</span>
+
+    <span class="c">&lt;!--public Employee getEmpAndDept(Integer id);--&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getEmpAndDept&#34;</span> <span class="na">parameterType=</span><span class="s">&#34;int&#34;</span> <span class="na">resultMap=</span><span class="s">&#34;emp2&#34;</span><span class="nt">&gt;</span>
+        select * from employee e,department d where e.did = d.id and e.id=#{id}
+    <span class="nt">&lt;/select&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="association">association</h4>
+
+<ol>
+<li><p>普通用法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resultMap</span> <span class="na">id=</span><span class="s">&#34;emp2&#34;</span> <span class="na">type=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;id</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;empName&#34;</span> <span class="na">column=</span><span class="s">&#34;emp_name&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;sex&#34;</span> <span class="na">column=</span><span class="s">&#34;sex&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&#34;email&#34;</span> <span class="na">property=</span><span class="s">&#34;email&#34;</span><span class="nt">/&gt;</span>
+    <span class="c">&lt;!-- 可以指定联合的javabean对象
+</span><span class="c">        property=&#34;&#34;指定javabean对应的对象的属性名
+</span><span class="c">        javaType=&#34;&#34;指定属性属于什么类型
+</span><span class="c">    --&gt;</span>
+    <span class="nt">&lt;association</span> <span class="na">property=</span><span class="s">&#34;dept&#34;</span> <span class="na">javaType=</span><span class="s">&#34;com.pattyforu.domain.Department&#34;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- 定义dept对象的封装规则 --&gt;</span>
+        <span class="nt">&lt;id</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&#34;dept_name&#34;</span> <span class="na">property=</span><span class="s">&#34;deptName&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/association&gt;</span>
+<span class="nt">&lt;/resultMap&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>分步查询</p></li>
+</ol>
+
+<ul>
+<li>先按照员工的id查询员工的信息</li>
+<li>根据查询员工信息的did值再去部门表查询部门信息</li>
+<li>把查询出来的部门设置到员工对象中去</li>
+</ul>
+
+<p>写两条sql语句,把连接查询分成两步来实现:<br />
+连接查询<code>select * from employee e,department d where e.did = d.id and e.id=#{id}</code><br />
+分步查询<code>select * from employee where id=#{id}</code>,<code>select * from department where id=#{id}</code></p>
+
+<p>代码</p>
+
+<p>员工查询</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml">    <span class="c">&lt;!-- 使用association进行分步（步骤）查询 --&gt;</span>
+    <span class="c">&lt;!--
+</span><span class="c">        1.select * from employee where id =1;
+</span><span class="c">        2.select * from Department where id= 1;
+</span><span class="c">     --&gt;</span>
+    <span class="nt">&lt;resultMap</span> <span class="na">id=</span><span class="s">&#34;EmpByStep&#34;</span> <span class="na">type=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;id</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;empName&#34;</span> <span class="na">column=</span><span class="s">&#34;emp_name&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;sex&#34;</span> <span class="na">column=</span><span class="s">&#34;sex&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&#34;email&#34;</span> <span class="na">property=</span><span class="s">&#34;email&#34;</span><span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- select:表示当前指定的dept属性是调用select指定的方法查询出来的结果
+</span><span class="c">             column:指定将那一列的值传递给这个方法
+</span><span class="c">        --&gt;</span>
+        <span class="nt">&lt;association</span> <span class="na">property=</span><span class="s">&#34;dept&#34;</span> <span class="na">select=</span><span class="s">&#34;com.pattyforu.dao.DepartmentMapper.getDeptById&#34;</span> <span class="na">column=</span><span class="s">&#34;did&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/resultMap&gt;</span>
+    <span class="c">&lt;!--public Employee getEmpById(Integer id);--&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getEmpById&#34;</span> <span class="na">parameterType=</span><span class="s">&#34;int&#34;</span> <span class="na">resultMap=</span><span class="s">&#34;EmpByStep&#34;</span><span class="nt">&gt;</span>
+        select * from employee where id=#{id}
+    <span class="nt">&lt;/select&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>部门查询</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="nf">interface</span> <span class="n">DepartmentMapper</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Department</span> <span class="n">getDeptById</span><span class="p">(</span><span class="n">Integer</span> <span class="nf">id</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;mapper</span> <span class="na">namespace=</span><span class="s">&#34;com.pattyforu.dao.DepartmentMapper&#34;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--public Department getDeptById(Integer id);--&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getDeptById&#34;</span> <span class="na">resultType=</span><span class="s">&#34;com.pattyforu.domain.Department&#34;</span><span class="nt">&gt;</span>
+        select * from department where id=#{id}
+    <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/mapper&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="一对多-department表中对应多个employee">一对多: Department表中对应多个employee</h3>
+
+<p>多个使用collection标签</p>
+
+<h4 id="collection">collection</h4>
+
+<ol>
+<li><p>普通用法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;resultMap</span> <span class="na">id=</span><span class="s">&#34;DeptEmp&#34;</span> <span class="na">type=</span><span class="s">&#34;com.pattyforu.domain.Department&#34;</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;id</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+	<span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;deptName&#34;</span> <span class="na">column=</span><span class="s">&#34;dept_name&#34;</span><span class="nt">/&gt;</span>
+	<span class="c">&lt;!-- collection定义关联集合类型的封装规则
+</span><span class="c">		 ofType=&#34;&#34;指定集合元素的类型
+</span><span class="c">	--&gt;</span>
+	<span class="nt">&lt;collection</span> <span class="na">property=</span><span class="s">&#34;emps&#34;</span> <span class="na">ofType=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;id</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+		<span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;empName&#34;</span> <span class="na">column=</span><span class="s">&#34;emp_name&#34;</span><span class="nt">/&gt;</span>
+		<span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;sex&#34;</span> <span class="na">column=</span><span class="s">&#34;sex&#34;</span><span class="nt">/&gt;</span>
+		<span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&#34;email&#34;</span> <span class="na">property=</span><span class="s">&#34;email&#34;</span><span class="nt">/&gt;</span>
+	<span class="nt">&lt;/collection&gt;</span>
+<span class="nt">&lt;/resultMap&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>分步查询</p></li>
+</ol>
+
+<p>部门查询</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!--使用分步查询--&gt;</span>
+<span class="nt">&lt;resultMap</span> <span class="na">id=</span><span class="s">&#34;DeptEmpByStep&#34;</span> <span class="na">type=</span><span class="s">&#34;com.pattyforu.domain.Department&#34;</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;id</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+	<span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;deptName&#34;</span> <span class="na">column=</span><span class="s">&#34;dept_name&#34;</span><span class="nt">/&gt;</span>
+	
+	<span class="c">&lt;!-- collection定义关联集合类型的封装规则
+</span><span class="c">	ofType=&#34;&#34;指定集合元素的类型--&gt;</span>
+	<span class="nt">&lt;collection</span> <span class="na">property=</span><span class="s">&#34;emps&#34;</span> <span class="na">select=</span><span class="s">&#34;com.pattyforu.dao.employeeRelation.getEmpsByDeptId&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+	<span class="c">&lt;!--lazy：表示使用延迟加载(默认)，  eager：表示立即加载--&gt;</span>
+	<span class="c">&lt;!--如果分步查询需要传递多个参数，mybatis会封装到map中进行传递
+</span><span class="c">	column=&#34;{key1=column1,key2=column2}&#34;
+</span><span class="c">
+</span><span class="c">	column=&#34;{key1=id}&#34; 取值时用#{key1}
+</span><span class="c">	  --&gt;</span>
+<span class="nt">&lt;/resultMap&gt;</span>
+
+<span class="c">&lt;!--public Department getDeptEmpByIdStep(Integer id);--&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getDeptEmpByIdStep&#34;</span> <span class="na">resultMap=</span><span class="s">&#34;DeptEmpByStep&#34;</span><span class="nt">&gt;</span>
+	select * from department where id=#{id}
+<span class="nt">&lt;/select&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>员工查询</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml">    <span class="c">&lt;!--public List&lt;Employee&gt; getEmpsByDeptId(int id);--&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getEmpsByDeptId&#34;</span> <span class="na">resultType=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+        select * from employee e where e.did=#{key1}
+    <span class="nt">&lt;/select&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="鉴别器">鉴别器</h2>
+
+<p>使用discriminator对查询的结果作判断</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml">    <span class="c">&lt;!--鉴别器--&gt;</span>
+    <span class="c">&lt;!--
+</span><span class="c">    需求：
+</span><span class="c">        如果查询出来员工的sex=男，那么就把部门信息查询出来，否则不查询部门信息
+</span><span class="c">        如果查询出来员工的sex=女，那么就把emp_name这一列赋值给email
+</span><span class="c"> --&gt;</span>
+    <span class="nt">&lt;resultMap</span> <span class="na">id=</span><span class="s">&#34;EmpDiscri&#34;</span> <span class="na">type=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;id</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;empName&#34;</span> <span class="na">column=</span><span class="s">&#34;emp_name&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;sex&#34;</span> <span class="na">column=</span><span class="s">&#34;sex&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&#34;email&#34;</span> <span class="na">property=</span><span class="s">&#34;email&#34;</span><span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- 鉴别器
+</span><span class="c">            column:指定判断的列名，
+</span><span class="c">            javaType:字段值所对应的java类型，
+</span><span class="c">        --&gt;</span>
+        <span class="nt">&lt;discriminator</span> <span class="na">javaType=</span><span class="s">&#34;String&#34;</span> <span class="na">column=</span><span class="s">&#34;sex&#34;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;case</span> <span class="na">value=</span><span class="s">&#34;男&#34;</span> <span class="na">resultType=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;association</span> <span class="na">property=</span><span class="s">&#34;dept&#34;</span> <span class="na">select=</span><span class="s">&#34;com.pattyforu.dao.DepartmentMapper.getDeptById&#34;</span> <span class="na">column=</span><span class="s">&#34;did&#34;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/case&gt;</span>
+            <span class="nt">&lt;case</span> <span class="na">value=</span><span class="s">&#34;vv&#34;</span> <span class="na">resultType=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+                <span class="c">&lt;!-- 部门信息不查询，直接将查询出来的员工的姓名赋值到员工的emial上 --&gt;</span>
+                <span class="nt">&lt;id</span> <span class="na">property=</span><span class="s">&#34;id&#34;</span> <span class="na">column=</span><span class="s">&#34;id&#34;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;empName&#34;</span> <span class="na">column=</span><span class="s">&#34;emp_name&#34;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;sex&#34;</span> <span class="na">column=</span><span class="s">&#34;sex&#34;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;result</span> <span class="na">property=</span><span class="s">&#34;email&#34;</span> <span class="na">column=</span><span class="s">&#34;emp_name&#34;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/case&gt;</span>
+        <span class="nt">&lt;/discriminator&gt;</span>
+    <span class="nt">&lt;/resultMap&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="懒加载">懒加载</h2>
+
+<p>在配置文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml">    <span class="nt">&lt;settings&gt;</span>
+        <span class="c">&lt;!--开启懒加载--&gt;</span>
+        <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&#34;lazyLoadingEnabled&#34;</span> <span class="na">value=</span><span class="s">&#34;true&#34;</span><span class="nt">/&gt;</span>
+        <span class="c">&lt;!--false 按需加载属性 如果懒加载没有开启此功能无效--&gt;</span>
+        <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&#34;aggressiveLazyLoading&#34;</span> <span class="na">value=</span><span class="s">&#34;false&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/settings&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>在mapper文件</p>
+
+<p>在collection 和 association标签里配置<code>fetchType=&quot;lazy&quot;</code><br />
+　　lazy：表示使用延迟加载(默认)<br />
+　　eager：表示立即加载</p>
+
+<h2 id="内置参数">内置参数</h2>
+
+<p>默认两个内置参数：<br />
+　　_parameter: 代表整个参数<br />
+　　如果方法传递了一个参数，_parameter就是这个参数<br />
+　　如果方法传入了多个参数，参数被封装成map，而_parameter就是代表这个map</p>
+
+<p>　　_databaseId: 代表当前的数据库别名<br />
+　　如果全局配置文件配置了databaseIdProvider标签，那么这个参数就会有值</p>
+
+<h2 id="重用sql">重用sql</h2>
+
+<p>抽取可重用的sql片段，方便后面引用</p>
+
+<ol>
+<li>sql抽取：经常查询的字段名或者新增数据时使用的字段名, 抽取出来方便引用</li>
+
+<li><p>include来引用已经抽取的sql</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;getEmpsByInnerParam&#34;</span> <span class="na">resultType=</span><span class="s">&#34;com.pattyforu.domain.Employee&#34;</span> <span class="nt">&gt;</span> 
+ select <span class="nt">&lt;include</span> <span class="na">refid=</span><span class="s">&#34;selectsql&#34;</span><span class="nt">/&gt;</span> from employee where id =#{id}
+<span class="nt">&lt;/select&gt;</span>
+ 
+<span class="nt">&lt;sql</span> <span class="na">id=</span><span class="s">&#34;selectsql&#34;</span><span class="nt">&gt;</span>
+	emp_name,sex,email,d_id
+<span class="nt">&lt;/sql&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+<h2 id="缓存">缓存</h2>
+
+<h3 id="一级缓存">一级缓存</h3>
+
+<p>一级缓存：本地缓存(sqlsession级别缓存)：<br />
+　　与数据库同一次会话（sqlSession）期间查询到的数据会放到本地缓存中<br />
+　　如果以后要获取相同的数据，直接从缓存中获取，不会再次向数据库查询数据<br />
+　　mybatis一直开启一级缓存，不同的sqlsesson级别缓存，数据不可共用</p>
+
+<p>一级缓存失效情况（没有使用到当前一级缓存，效果就是第二次查询相同语句还需要向数据库发送sql）</p>
+
+<ol>
+<li>sqlsession不同</li>
+<li>当sqlsession对象相同，查询条件不同，原因第一次查询的过程中一级缓存中没有第二次查询需要的数据，</li>
+<li>当sqlsession对象相同，两次查询之间进行了增删改的操作</li>
+<li>当sqlsession对象相同，手动清除了一级缓存中的数据(sqlSession.clearCache())</li>
+</ol>
+
+<h3 id="二级缓存">二级缓存</h3>
+
+<p>二级缓存：全局缓存：基于namespace级别的缓存(mapper的全局)</p>
+
+<ol>
+<li>一个会话，查询出来一条数据，这个数据就会被放到当前会话中的一级缓存中，如果会话没有关闭，第二次再查询，直接从
+一级缓存中</li>
+<li>如果当前会话被关闭掉，那么对应的一级缓存没有了，但是mybatis会将一级缓存中的数据保存到二级缓存中，
+如果再次创建一次会话，再重新发送查询，首先先看二级缓存中有没有对应的，如果二级缓存找不到，就去一级缓存中找, 如果一级缓存也没有，则重新向数据发送语句进行查询</li>
+</ol>
+
+<p>使用二级缓存：</p>
+
+<ol>
+<li>在全局配置文件加上设置 配置 setting标签值 <code>cacheEnabled=true</code><br />
+cacheEnabled=fasle:关闭缓存，一级缓存不会影响</li>
+<li>去mapper.xml配置 使用 二级缓存<code>&lt;cache/&gt;</code><br />
+也可以详细配置<code>&lt;cache eviction=&quot;FIFO&quot; readOnly=&quot;false&quot; size=&quot;1024&quot;&gt;&lt;/cache&gt;</code><br /></li>
+<li>实体类实现Serializable<br />
+当cache标签配置<code>readOnly=&quot;false&quot;</code>时, 没有安全问题, 实体类需要实现序列化接口</li>
+</ol>
+
+<h4 id="cache标签说明">cache标签说明</h4>
+
+<p>cache：用于开启二级缓存</p>
+
+<ul>
+<li>eviction：缓存的回收策略FIFO：对象先进先出<br /></li>
+<li>flushInterval：刷新缓存间隔，配置毫秒数，默认不清空</li>
+
+<li><p>readOnly：是否只读 设置true代表只读<br />
+true : mybatis会认为从缓存中获取到的数据不做修改操作，mybatis为了去加快效率，直接会将缓存中的引用直接交给用户，而用户可能会作修改操作,不安全<br />
+false : mybatis会认为缓存中的数据会进行修改，mybatis会利用序列化与反序列化复制一份新的数据给用户，这种操作不会影响原来的数据, 安全</p></li>
+
+<li><p>size : 缓存中存放多少元素</p></li>
+
+<li><p>type:指定自定义的全类名</p></li>
+</ul>
+
+<h4 id="mapper-配置">mapper 配置</h4>
+
+<p>mapper.xml select标签上有一个 useCache=&ldquo;true&rdquo; 默认为true，代表缓存都可以使用<br />
+如果设置useCache=&ldquo;fasle&rdquo;代表不使用缓存，对一级缓存不影响，会影响二级缓存</p>
+
+<p>在两次查询之间进行新增修改删除的任意一个操作，对一级缓存和二级缓存都会影响<br />
+原因是在mapper文件中的insert update delete 默认有个属性：flushCache=&ldquo;true&rdquo;：代表清空缓存数据</p>
+
+<h3 id="总结-1">总结</h3>
+
+<p>一级缓存不能被开启和关闭, 只能flush<br />
+二级缓存可以开启和关闭,也可以flush</p>
+
+<h2 id="第三方缓存">第三方缓存</h2>
+
+<p>第三方缓存框架：ehcache(分布式缓存)</p>
+
+<ol>
+<li><p>导入依赖</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 --&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+	<span class="nt">&lt;groupId&gt;</span>org.slf4j<span class="nt">&lt;/groupId&gt;</span>
+	<span class="nt">&lt;artifactId&gt;</span>slf4j-log4j12<span class="nt">&lt;/artifactId&gt;</span>
+	<span class="nt">&lt;version&gt;</span>2.0.0-alpha0<span class="nt">&lt;/version&gt;</span>
+	<span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+
+<span class="nt">&lt;dependency&gt;</span>
+	<span class="nt">&lt;groupId&gt;</span>org.mybatis.caches<span class="nt">&lt;/groupId&gt;</span>
+	<span class="nt">&lt;artifactId&gt;</span>mybatis-ehcache<span class="nt">&lt;/artifactId&gt;</span>
+	<span class="nt">&lt;version&gt;</span>1.1.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>在mapper.xml文件中加上<code>&lt;cache type=&quot;org.mybatis.caches.ehcache.EhcacheCache&quot;/&gt;</code></p></li>
+
+<li><p>在resource目录下创建ehcache.xml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml">	<span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span class="nt">&lt;ehcache</span> <span class="na">xmlns:xsi=</span><span class="s">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+     <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&#34;http://ehcache.org/ehcache.xsd&#34;</span>
+     <span class="na">updateCheck=</span><span class="s">&#34;false&#34;</span><span class="nt">&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">   diskStore：为缓存路径，ehcache分为内存和磁盘两级，
+</span><span class="c">   	此属性定义磁盘的缓存位置。参数解释如下：
+</span><span class="c"> --&gt;</span>
+<span class="nt">&lt;diskStore</span> <span class="na">path=</span><span class="s">&#34;E:\ehcache&#34;</span><span class="nt">/&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">   defaultCache：默认缓存策略
+</span><span class="c"> --&gt;</span>
+<span class="c">&lt;!--
+</span><span class="c">  maxElementsInMemory:缓存最大数目
+</span><span class="c">  maxElementsOnDisk：硬盘最大缓存个数。
+</span><span class="c">  eternal:对象是否永久有效，一但设置了，timeout将不起作用。
+</span><span class="c">  overflowToDisk:是否保存到磁盘，当系统当机时
+</span><span class="c">  timeToIdleSeconds:设置对象在失效前的允许闲置时间（单位：秒）。仅当eternal=false对象不是永久有效时使用，可选属性，默认值是0，也就是可闲置时间无穷大。
+</span><span class="c">  timeToLiveSeconds:设置对象在失效前允许存活时间（单位：秒）。最大时间介于创建时间和失效时间之间。仅当eternal=false对象不是永久有效时使用，默认是0.，也就是对象存活时间无穷大。
+</span><span class="c">  diskPersistent：是否缓存虚拟机重启期数据 Whether the disk store persists between restarts of the Virtual Machine. The default value is false.
+</span><span class="c">  diskSpoolBufferSizeMB：这个参数设置DiskStore（磁盘缓存）的缓存区大小。默认是30MB。每个Cache都应该有自己的一个缓冲区。
+</span><span class="c">  diskExpiryThreadIntervalSeconds：磁盘失效线程运行时间间隔，默认是120秒。
+</span><span class="c">  memoryStoreEvictionPolicy：当达到maxElementsInMemory限制时，Ehcache将会根据指定的策略去清理内存。默认策略是LRU（最近最少使用）。你可以设置为FIFO（先进先出）或是LFU（较少使用）。
+</span><span class="c">  clearOnFlush：内存数量最大时是否清除。
+</span><span class="c">  memoryStoreEvictionPolicy:可选策略有：LRU（最近最少使用，默认策略）、FIFO（先进先出）、LFU（最少访问次数）。
+</span><span class="c">  FIFO，first in first out，这个是大家最熟的，先进先出。
+</span><span class="c">  LFU， Less Frequently Used，就是上面例子中使用的策略，直白一点就是讲一直以来最少被使用的。如上面所讲，缓存的元素有一个hit属性，hit值最小的将会被清出缓存。
+</span><span class="c">  LRU，Least Recently Used，最近最少使用的，缓存的元素有一个时间戳，当缓存容量满了，而又需要腾出地方来缓存新的元素的时候，那么现有缓存元素中时间戳离当前时间最远的元素将被清出缓存。
+</span><span class="c">--&gt;</span>
+<span class="nt">&lt;defaultCache</span>
+        <span class="na">eternal=</span><span class="s">&#34;false&#34;</span>
+        <span class="na">maxElementsInMemory=</span><span class="s">&#34;10000&#34;</span>
+        <span class="na">overflowToDisk=</span><span class="s">&#34;true&#34;</span>
+        <span class="na">diskPersistent=</span><span class="s">&#34;false&#34;</span>
+        <span class="na">timeToIdleSeconds=</span><span class="s">&#34;1800&#34;</span>
+        <span class="na">timeToLiveSeconds=</span><span class="s">&#34;259200&#34;</span>
+        <span class="na">memoryStoreEvictionPolicy=</span><span class="s">&#34;LRU&#34;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ehcache&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>程序自动使用第三方缓存</p></li>
+</ol>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">PattyForu</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-09-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/mapper/">Mapper</a>
+          <a href="/tags/mybatis/">Mybatis</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/mybatis_%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">MyBatis_逆向工程</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/mybatis_%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">
+            <span class="next-text nav-default">Mybatis_配置详解</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+  <a href="http://example.org/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">PattyForu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

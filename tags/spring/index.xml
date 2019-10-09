@@ -1,25 +1,104 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>spring on Patty</title>
+    <title>Spring on Patty</title>
     <link>http://example.org/tags/spring/</link>
-    <description>Recent content in spring on Patty</description>
+    <description>Recent content in Spring on Patty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Sep 2019 15:34:49 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 02 Oct 2019 08:16:55 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Spring_Xml配置</title>
-      <link>http://example.org/post/spring_xml%E9%85%8D%E7%BD%AE/</link>
+      <title>Mybatis Spring整合</title>
+      <link>http://example.org/post/mybatis-spring%E6%95%B4%E5%90%88/</link>
+      <pubDate>Wed, 02 Oct 2019 08:16:55 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis-spring%E6%95%B4%E5%90%88/</guid>
+      <description>&lt;p&gt;使用MyBatis提供的整合包mybatis-spring, 和spring框架进行整合&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop事务注解配置</title>
+      <link>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 13 Sep 2019 14:41:29 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用注解配置aop事务&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop事务xml配置</title>
+      <link>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1xml%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 12 Sep 2019 09:55:09 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1xml%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;Spring_aop事务配置式的xml配置,使用Spring提供好的事务通知进行配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop注解配置</title>
+      <link>http://example.org/post/spring_aop%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 08 Sep 2019 18:15:38 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用xml和注解配置aop&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop的xml配置</title>
+      <link>http://example.org/post/spring_aop%E7%9A%84xml%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 07 Sep 2019 11:51:31 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E7%9A%84xml%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;Spring aop的xml配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_动态代理</title>
+      <link>http://example.org/post/spring_%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Sat, 07 Sep 2019 08:23:29 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</guid>
+      <description>&lt;p&gt;jdk动态代理和cglib动态代理&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_纯注解配置</title>
+      <link>http://example.org/post/spring_%E7%BA%AF%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 06 Sep 2019 16:06:10 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_%E7%BA%AF%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用纯注解的配置类&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_ioc注解配置</title>
+      <link>http://example.org/post/spring_%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 03 Sep 2019 08:46:46 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用Annotation配置Bean对象&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_使用类获取对象</title>
+      <link>http://example.org/post/spring_%E4%BD%BF%E7%94%A8%E7%B1%BB%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Mon, 02 Sep 2019 17:58:46 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_%E4%BD%BF%E7%94%A8%E7%B1%BB%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1/</guid>
+      <description>&lt;p&gt;使用ApplicationContext/BeanFactory实现类创建ioc容器，并获取Bean对象&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_ioc的xml配置</title>
+      <link>http://example.org/post/spring_ioc%E7%9A%84xml%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 02 Sep 2019 15:34:49 +0800</pubDate>
       
-      <guid>http://example.org/post/spring_xml%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;p&gt;spring 的纯xml配置&lt;/p&gt;
-
-&lt;hr /&gt;</description>
+      <guid>http://example.org/post/spring_ioc%E7%9A%84xml%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;springioc的纯xml配置&lt;/p&gt;</description>
     </item>
     
     <item>

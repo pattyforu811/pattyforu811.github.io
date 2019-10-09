@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mybatis Spring整合 - Patty</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="PattyForu" /><meta name="description" content="使用MyBatis提供的整合包mybatis-spring, 和spring框架进行整合
+" /><meta name="keywords" content="Spring, Mybatis" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://example.org/post/mybatis-spring%E6%95%B4%E5%90%88/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Mybatis Spring整合" />
+<meta property="og:description" content="使用MyBatis提供的整合包mybatis-spring, 和spring框架进行整合" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/post/mybatis-spring%E6%95%B4%E5%90%88/" />
+<meta property="article:published_time" content="2019-10-02T08:16:55+08:00" />
+<meta property="article:modified_time" content="2019-10-02T08:16:55+08:00" />
+<meta itemprop="name" content="Mybatis Spring整合">
+<meta itemprop="description" content="使用MyBatis提供的整合包mybatis-spring, 和spring框架进行整合">
+
+
+<meta itemprop="datePublished" content="2019-10-02T08:16:55&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-02T08:16:55&#43;08:00" />
+<meta itemprop="wordCount" content="1590">
+
+
+
+<meta itemprop="keywords" content="Spring,Mybatis," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mybatis Spring整合"/>
+<meta name="twitter:description" content="使用MyBatis提供的整合包mybatis-spring, 和spring框架进行整合"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">PattyForu</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">PattyForu</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Mybatis Spring整合</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-02 </span>
+        <div class="post-category">
+            <a href="/categories/spring/"> Spring </a>
+            <a href="/categories/mybatis/"> Mybatis </a>
+            </div>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#导入依赖">导入依赖</a></li>
+<li><a href="#目录结构">目录结构</a></li>
+<li><a href="#dao接口-实现类的方式">dao接口+实现类的方式</a>
+<ul>
+<li><a href="#mybatis的全局配置文件">mybatis的全局配置文件</a></li>
+<li><a href="#dao接口">dao接口</a></li>
+<li><a href="#配置sqlmapper映射文件">配置sqlmapper映射文件</a></li>
+<li><a href="#dao实现类">dao实现类</a></li>
+<li><a href="#service实现类">service实现类</a></li>
+<li><a href="#配置spring的全局配置文件">配置Spring的全局配置文件</a></li>
+<li><a href="#test">Test</a></li>
+</ul></li>
+<li><a href="#dao-接口-框架生成实现类">dao 接口+ 框架生成实现类</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>使用MyBatis提供的整合包mybatis-spring, 和spring框架进行整合</p>
+
+<hr />
+
+<h2 id="导入依赖">导入依赖</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&lt;dependency&gt;
+	&lt;groupId&gt;junit&lt;/groupId&gt;
+	&lt;artifactId&gt;junit&lt;/artifactId&gt;
+	&lt;version&gt;4.11&lt;/version&gt;
+	&lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring --&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+	&lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;
+	&lt;version&gt;2.0.2&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- https://mvnrepository.com/artifact/org.mybatis/mybatis --&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+	&lt;artifactId&gt;mybatis&lt;/artifactId&gt;
+	&lt;version&gt;3.5.2&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-context --&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+	&lt;version&gt;5.0.8.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java --&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;mysql&lt;/groupId&gt;
+	&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+	&lt;version&gt;5.1.27&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- https://mvnrepository.com/artifact/com.mchange/c3p0 --&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;com.mchange&lt;/groupId&gt;
+	&lt;artifactId&gt;c3p0&lt;/artifactId&gt;
+	&lt;version&gt;0.9.5.4&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;log4j&lt;/groupId&gt;
+	&lt;artifactId&gt;log4j&lt;/artifactId&gt;
+	&lt;version&gt;1.2.17&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc --&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+	&lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;
+	&lt;version&gt;5.0.8.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="目录结构">目录结构</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">src
+ └─main
+    ├─java
+    │  └─io
+    │      └─pattyforu
+    │          ├─dao
+    │          │  │  EmployeeMapper.java
+    │          │  │
+    │          │  └─impl
+    │          │          EmployeeMapperImpl.java
+    │          │
+    │          ├─domain
+    │          │      Employee.java
+    │          │
+    │          └─service
+    │              │  EmployeeService.java
+    │              │
+    │              └─impl
+    │                      EmployeeServiceImpl.java
+    │
+    ├─resources
+    │  │  applicationContext.xml
+    │  │  jdbc.properties
+    │  │  log4j.properties
+    │  │  mybatis-config.xml
+    │  │
+    │  └─io
+    │      └─pattyforu
+    │          └─dao
+    │                  EmployeeMapper.xml
+    │
+    └─webapp
+    │  index.jsp
+    │
+    └─WEB-INF
+    web.xml</pre></td></tr></table>
+</div>
+</div>
+<h2 id="dao接口-实现类的方式">dao接口+实现类的方式</h2>
+
+<p>在dao接口加上实现类，继承SqlSessionDaoSupport, 获取sqlsession对象</p>
+
+<h3 id="mybatis的全局配置文件">mybatis的全局配置文件</h3>
+
+<p>mybatis-config.xml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE configuration
+</span><span class="cp">        PUBLIC &#34;-//mybatis.org//DTD Config 3.0//EN&#34;
+</span><span class="cp">        &#34;http://mybatis.org/dtd/mybatis-3-config.dtd&#34;&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+
+    <span class="c">&lt;!--将sql映射文件配置到全局配置文件中--&gt;</span>
+    <span class="nt">&lt;mappers&gt;</span>
+        <span class="nt">&lt;package</span> <span class="na">name=</span><span class="s">&#34;io.pattyforu.dao&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/mappers&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="dao接口">dao接口</h3>
+
+<p>EmployeeMapper.java</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">dao</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">domain</span><span class="p">.</span><span class="na">Employee</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">ibatis</span><span class="p">.</span><span class="na">annotations</span><span class="p">.</span><span class="na">Param</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">List</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="nf">interface</span> <span class="n">EmployeeMapper</span> <span class="p">{</span>
+    <span class="cm">/**
+</span><span class="cm">     * 根据id查询数据
+</span><span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Employee</span> <span class="n">selectEmployeeById</span><span class="p">(</span><span class="n">Integer</span> <span class="nf">id</span><span class="p">);</span>
+
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="配置sqlmapper映射文件">配置sqlmapper映射文件</h3>
+
+<p>EmployeeMapper.xml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE mapper
+</span><span class="cp">  PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
+</span><span class="cp">  &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
+<span class="nt">&lt;mapper</span> <span class="na">namespace=</span><span class="s">&#34;io.pattyforu.dao.EmployeeMapper&#34;</span><span class="nt">&gt;</span>
+
+ <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;selectEmployeeById&#34;</span> <span class="na">resultType=</span><span class="s">&#34;io.pattyforu.domain.Employee&#34;</span><span class="nt">&gt;</span>
+ 	select * from employee where id = #{id}
+ <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/mapper&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="dao实现类">dao实现类</h3>
+
+<p>自己写实现类<br />
+EmployeeMapperImpl.java</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">impl</span><span class="p">;</span>
+
+
+<span class="kn">import</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">EmployeeMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">domain</span><span class="p">.</span><span class="na">Employee</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">ibatis</span><span class="p">.</span><span class="na">session</span><span class="p">.</span><span class="na">SqlSession</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">org</span><span class="p">.</span><span class="na">mybatis</span><span class="p">.</span><span class="na">spring</span><span class="p">.</span><span class="na">support</span><span class="p">.</span><span class="na">SqlSessionDaoSupport</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="nf">class</span> <span class="n">EmployeeMapperImpl</span> <span class="nf">extends</span> <span class="n">SqlSessionDaoSupport</span> <span class="nf">implements</span> <span class="n">EmployeeMapper</span> <span class="p">{</span>
+    <span class="cm">/**
+</span><span class="cm">     * 根据id查询数据
+</span><span class="cm">     *
+</span><span class="cm">     * @param id
+</span><span class="cm">     */</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nf">Employee</span> <span class="n">selectEmployeeById</span><span class="p">(</span><span class="n">Integer</span> <span class="nf">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">SqlSession</span> <span class="nf">sqlSession</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getSqlSession</span><span class="p">();</span>
+        <span class="n">EmployeeMapper</span> <span class="nf">mapper</span> <span class="o">=</span> <span class="n">sqlSession</span><span class="p">.</span><span class="na">getMapper</span><span class="p">(</span><span class="n">EmployeeMapper</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">mapper</span><span class="p">.</span><span class="na">selectEmployeeById</span><span class="p">(</span><span class="n">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="service实现类">service实现类</h3>
+
+<p>EmployeeServiceImpl.java</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">service</span><span class="p">.</span><span class="na">impl</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">EmployeeMapper</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">domain</span><span class="p">.</span><span class="na">Employee</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">service</span><span class="p">.</span><span class="na">EmployeeService</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="nf">class</span> <span class="n">EmployeeServiceImpl</span> <span class="nf">implements</span> <span class="n">EmployeeService</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="nf">EmployeeMapper</span> <span class="n">employeeMapper</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">void</span> <span class="n">setEmployeeMapper</span><span class="p">(</span><span class="n">EmployeeMapper</span> <span class="nf">employeeMapper</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">employeeMapper</span> <span class="o">=</span> <span class="n">employeeMapper</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nf">Employee</span> <span class="n">selectEmployeeById</span><span class="p">(</span><span class="n">Integer</span> <span class="nf">id</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">return</span> <span class="n">employeeMapper</span><span class="p">.</span><span class="na">selectEmployeeById</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="配置spring的全局配置文件">配置Spring的全局配置文件</h3>
+
+<p>Spring使用c3p0配置来数据源, 并把SqlSessionFactory交给Spring管理</p>
+
+<p>applicationContext.xml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.springframework.org/schema/beans&#34;</span>
+       <span class="na">xmlns:xsi=</span><span class="s">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+       <span class="na">xmlns:context=</span><span class="s">&#34;http://www.springframework.org/schema/context&#34;</span>
+       <span class="na">xsi:schemaLocation=</span><span class="s">&#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd&#34;</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- 引入jdbc.properties --&gt;</span>
+    <span class="nt">&lt;context:property-placeholder</span> <span class="na">location=</span><span class="s">&#34;classpath:jdbc.properties&#34;</span><span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- 配置数据库连接信息，替代mybatis的配置文件mybatis-config.xml --&gt;</span>
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">&#34;com.mchange.v2.c3p0.ComboPooledDataSource&#34;</span> <span class="na">name=</span><span class="s">&#34;dataSource&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;driverClass&#34;</span> <span class="na">value=</span><span class="s">&#34;${jdbc.driverClass}&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;jdbcUrl&#34;</span> <span class="na">value=</span><span class="s">&#34;${jdbc.jdbcUrl}&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;user&#34;</span> <span class="na">value=</span><span class="s">&#34;${jdbc.user}&#34;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;password&#34;</span> <span class="na">value=</span><span class="s">&#34;${jdbc.password}&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+
+    <span class="c">&lt;!-- 在spring容器中创建mybatis的核心对象SqlSessionFactroy对象 --&gt;</span>
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">&#34;org.mybatis.spring.SqlSessionFactoryBean&#34;</span> <span class="na">name=</span><span class="s">&#34;sqlSessionFactory&#34;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- 给sqlsessionfactory配置连接信息，这是必须属性 --&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;dataSource&#34;</span> <span class="na">ref=</span><span class="s">&#34;dataSource&#34;</span><span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- 加载mybatis的配置文件 --&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;configLocation&#34;</span> <span class="na">value=</span><span class="s">&#34;classpath:mybatis-config.xml&#34;</span><span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- 加载mapper.xml文件路径 --&gt;</span>
+        <span class="c">&lt;!--&lt;property name=&#34;mapperLocations&#34; value=&#34;io/pattyforu/dao/*.xml&#34;/&gt;--&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+
+    <span class="c">&lt;!-- Spring产生mybatis最终需要的动态mapper对象，EmployeeMapper
+</span><span class="c">        1.在dao接口加上实现类，继承SqlSessionDaoSupport,获取sqlsession对象，
+</span><span class="c">    --&gt;</span>
+
+    <span class="c">&lt;!--第一种--&gt;</span>
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">&#34;io.pattyforu.dao.impl.EmployeeMapperImpl&#34;</span> <span class="na">name=</span><span class="s">&#34;employeeMapper&#34;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!--dao层访问数据库需要 sqlSessionFactory对象，所以需要进行关联--&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;sqlSessionFactory&#34;</span> <span class="na">ref=</span><span class="s">&#34;sqlSessionFactory&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+
+    <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">&#34;io.pattyforu.service.impl.EmployeeServiceImpl&#34;</span> <span class="na">name=</span><span class="s">&#34;employeeService&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;employeeMapper&#34;</span> <span class="na">ref=</span><span class="s">&#34;employeeMapper&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+<span class="nt">&lt;/beans&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="test">Test</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">domain</span><span class="p">.</span><span class="na">Employee</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">io</span><span class="p">.</span><span class="na">pattyforu</span><span class="p">.</span><span class="na">service</span><span class="p">.</span><span class="na">EmployeeService</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">org</span><span class="p">.</span><span class="na">junit</span><span class="p">.</span><span class="na">Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">support</span><span class="p">.</span><span class="na">ClassPathXmlApplicationContext</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="nf">class</span> <span class="n">EmployeeserviceImplTest</span> <span class="p">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="nf">void</span> <span class="n">TestSelectEmployeeById</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">ClassPathXmlApplicationContext</span> <span class="nf">context</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ClassPathXmlApplicationContext</span><span class="p">(</span><span class="s">&#34;applicationContext.xml&#34;</span><span class="p">);</span>
+        <span class="n">EmployeeService</span> <span class="nf">employeeService</span> <span class="o">=</span> <span class="n">context</span><span class="p">.</span><span class="na">getBean</span><span class="p">(</span><span class="s">&#34;employeeService&#34;</span><span class="p">,</span> <span class="n">EmployeeService</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+        <span class="n">Employee</span> <span class="nf">employee</span> <span class="o">=</span> <span class="n">employeeService</span><span class="p">.</span><span class="na">selectEmployeeById</span><span class="p">(</span><span class="n">1</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">employee</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="dao-接口-框架生成实现类">dao 接口+ 框架生成实现类</h2>
+
+<ol>
+<li><p>使用MapperFactoryBean类生成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!--第二种--&gt;</span>
+<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">&#34;employeeDao&#34;</span> <span class="na">class=</span><span class="s">&#34;org.mybatis.spring.mapper.MapperFactoryBean&#34;</span><span class="nt">&gt;</span>
+	<span class="c">&lt;!--通过MapperFactoryBean创建出来value所对应的接口实现类对象--&gt;</span>
+	<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;mapperInterface&#34;</span> <span class="na">value=</span><span class="s">&#34;com.pattyforu.dao.EmployeeDao&#34;</span><span class="nt">&gt;&lt;/property&gt;</span>
+	<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;sqlSessionFactory&#34;</span> <span class="na">ref=</span><span class="s">&#34;sqlSessionFactory&#34;</span><span class="nt">&gt;&lt;/property&gt;</span>
+<span class="nt">&lt;/bean&gt;</span> </code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>基于第二种方式，如果有多个dao。那么就要配置多个bean，太麻烦，所以使用MapperScannerConfigurer直接全部配置好</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="c">&lt;!--第三种--&gt;</span>
+<span class="c">&lt;!-- MapperScannerConfigurer：批量生产多个实现类对象 --&gt;</span>
+<span class="c">&lt;!-- 批量生产dao对象在spring容器中id默认值为接口名首字母小写 --&gt;</span>
+<span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">&#34;org.mybatis.spring.mapper.MapperScannerConfigurer&#34;</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;sqlSessionFactoryBeanName&#34;</span> <span class="na">value=</span><span class="s">&#34;sqlSessionFactory&#34;</span><span class="nt">/&gt;</span>
+	<span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;basePackage&#34;</span> <span class="na">value=</span><span class="s">&#34;io.pattyforu.dao&#34;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/bean&gt;</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">PattyForu</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-10-02
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/spring/">Spring</a>
+          <a href="/tags/mybatis/">Mybatis</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/springmvc_%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">SpringMVC_编程风格</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/mybatis_%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/">
+            <span class="next-text nav-default">MyBatis_分页插件</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+  <a href="http://example.org/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">PattyForu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

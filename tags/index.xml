@@ -6,26 +6,71 @@
     <description>Recent content in Tags on Patty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Sep 2019 17:58:46 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2019 22:16:21 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Sprig</title>
-      <link>http://example.org/tags/sprig/</link>
-      <pubDate>Mon, 02 Sep 2019 17:58:46 +0800</pubDate>
+      <title>SpringMVC</title>
+      <link>http://example.org/tags/springmvc/</link>
+      <pubDate>Tue, 08 Oct 2019 22:16:21 +0800</pubDate>
       
-      <guid>http://example.org/tags/sprig/</guid>
+      <guid>http://example.org/tags/springmvc/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>spring</title>
+      <title>MyBatis</title>
+      <link>http://example.org/tags/mybatis/</link>
+      <pubDate>Wed, 02 Oct 2019 08:16:55 +0800</pubDate>
+      
+      <guid>http://example.org/tags/mybatis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring</title>
       <link>http://example.org/tags/spring/</link>
-      <pubDate>Mon, 02 Sep 2019 15:34:49 +0800</pubDate>
+      <pubDate>Wed, 02 Oct 2019 08:16:55 +0800</pubDate>
       
       <guid>http://example.org/tags/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>分页</title>
+      <link>http://example.org/tags/%E5%88%86%E9%A1%B5/</link>
+      <pubDate>Tue, 01 Oct 2019 07:47:45 +0800</pubDate>
+      
+      <guid>http://example.org/tags/%E5%88%86%E9%A1%B5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mapper</title>
+      <link>http://example.org/tags/mapper/</link>
+      <pubDate>Sat, 28 Sep 2019 17:03:42 +0800</pubDate>
+      
+      <guid>http://example.org/tags/mapper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aop</title>
+      <link>http://example.org/tags/aop/</link>
+      <pubDate>Fri, 13 Sep 2019 14:41:29 +0800</pubDate>
+      
+      <guid>http://example.org/tags/aop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://example.org/tags/java/</link>
+      <pubDate>Sat, 07 Sep 2019 10:53:23 +0800</pubDate>
+      
+      <guid>http://example.org/tags/java/</guid>
       <description></description>
     </item>
     

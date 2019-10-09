@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>SpringMVC_响应数据和结果视图 - Patty</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="PattyForu" /><meta name="description" content="" /><meta name="keywords" content="SpringMVC" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://example.org/post/springmvc_%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="SpringMVC_响应数据和结果视图" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/post/springmvc_%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/" />
+<meta property="article:published_time" content="2019-10-04T20:49:04+08:00" />
+<meta property="article:modified_time" content="2019-10-04T20:49:04+08:00" />
+<meta itemprop="name" content="SpringMVC_响应数据和结果视图">
+<meta itemprop="description" content="">
+
+
+<meta itemprop="datePublished" content="2019-10-04T20:49:04&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-04T20:49:04&#43;08:00" />
+<meta itemprop="wordCount" content="1385">
+
+
+
+<meta itemprop="keywords" content="SpringMVC," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SpringMVC_响应数据和结果视图"/>
+<meta name="twitter:description" content=""/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">PattyForu</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">PattyForu</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">SpringMVC_响应数据和结果视图</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-04 </span>
+        <div class="post-category">
+            <a href="/categories/springmvc/"> SpringMVC </a>
+            </div>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#返回-string">返回 String</a></li>
+<li><a href="#返回-void">返回 void</a></li>
+<li><a href="#返回-modelandview">返回 ModelAndview</a></li>
+<li><a href="#springmvc框架提供的转发和重定向">SpringMVC框架提供的转发和重定向</a>
+<ul>
+<li><a href="#forward请求转发">forward请求转发</a></li>
+<li><a href="#redirect重定向">redirect重定向</a></li>
+</ul></li>
+<li><a href="#responsebody响应json数据">@ResponseBody响应json数据</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <hr />
+
+<h2 id="返回-string">返回 String</h2>
+
+<p>Controller方法返回字符串可以指定逻辑视图的名称，根据视图解析器为物理视图的地</p>
+
+<p>可以用 Model 存储数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&#34;/testString&#34;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">String</span> <span class="n">testString</span><span class="p">(</span><span class="n">Model</span> <span class="nf">model</span><span class="p">)</span> <span class="p">{</span>
+	<span class="c1">// 模拟从数据库中查询的数据
+</span><span class="c1"></span>	<span class="n">User</span> <span class="nf">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="p">();</span>
+	<span class="n">user</span><span class="p">.</span><span class="na">setUsername</span><span class="p">(</span><span class="s">&#34;张三&#34;</span><span class="p">);</span>
+	<span class="n">user</span><span class="p">.</span><span class="na">setPassword</span><span class="p">(</span><span class="s">&#34;123&#34;</span><span class="p">);</span>
+	<span class="n">user</span><span class="p">.</span><span class="na">setAge</span><span class="p">(</span><span class="n">12</span><span class="p">);</span>
+
+	<span class="n">model</span><span class="p">.</span><span class="na">addAttribute</span><span class="p">(</span><span class="s">&#34;user&#34;</span><span class="p">,</span> <span class="n">user</span><span class="p">);</span>
+	<span class="k">return</span> <span class="s">&#34;success&#34;</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="返回-void">返回 void</h2>
+
+<p>如果控制器的方法返回值编写成void，执行程序报404的异常，默认查找JSP页面没有找到</p>
+
+<p>默认返回<code>/WEB-INF/pages/user/testVoid.jsp</code>页面</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Controller</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&#34;/user&#34;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">class</span> <span class="n">UserController</span> <span class="p">{</span>
+         <span class="cm">/**
+</span><span class="cm">         * return void
+</span><span class="cm">         */</span>
+        <span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&#34;/testVoid&#34;</span><span class="p">)</span>
+        <span class="kd">public</span> <span class="nf">void</span> <span class="n">testVoid</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;默认返回/WEB-INF/pages/user/testVoid.jsp页面&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+ <span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>我们可以在 controller 方法形参上定义 request 和 response，使用 request 或 response 指定响应结果</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"> <span class="cm">/**
+</span><span class="cm"> * return void
+</span><span class="cm"> * 可以使用请求转发或者重定向跳转到指定的页面
+</span><span class="cm"> */</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&#34;/testReturnVoid&#34;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">void</span> <span class="n">testReturnVoid</span><span class="p">(</span><span class="n">HttpServletRequest</span> <span class="nf">request</span><span class="p">,</span> <span class="n">HttpServletResponse</span> <span class="nf">response</span><span class="p">)</span> <span class="kd">throws</span>
+		<span class="nf">ServletException</span><span class="p">,</span> <span class="n">IOException</span> <span class="p">{</span>
+<span class="c1">//  1、使用 request 转向页面
+</span><span class="c1">//  WEB-INF 前面的/ 不能少, 少了返回的路径会加上RequestMapping的一级目录
+</span><span class="c1">//  用request转发不会用到视图解析器, 要把路径写全
+</span><span class="c1">//  request.getRequestDispatcher(&#34;/WEB-INF/pages/redirect.jsp&#34;).forward(request, response);
+</span><span class="c1"></span>
+<span class="c1">//  2、也可以通过 response 页面重定向
+</span><span class="c1">//  response.sendRedirect(request.getContextPath()+&#34;/redirect.jsp&#34;);
+</span><span class="c1"></span>
+<span class="c1">//  3、也可以通过 response 指定响应结果
+</span><span class="c1"></span>	<span class="n">response</span><span class="p">.</span><span class="na">setContentType</span><span class="p">(</span><span class="s">&#34;text/html;charset=UTF-8&#34;</span><span class="p">);</span>
+	<span class="n">response</span><span class="p">.</span><span class="na">getWriter</span><span class="p">().</span><span class="na">write</span><span class="p">(</span><span class="s">&#34;卓镇雄&#34;</span><span class="p">);</span>
+	<span class="k">return</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="返回-modelandview">返回 ModelAndview</h2>
+
+<p>ModelAndView 对象是 Sring 提供的一个对象，可以用来调整具体的JSP</p>
+
+<p>可以传入视图的名称（即跳转的页面），还可以传入对象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/**
+</span><span class="cm"> * 返回ModelAndView对象
+</span><span class="cm"> */</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&#34;/testModelAndView&#34;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">ModelAndView</span> <span class="n">testModelAndView</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">ModelAndView</span> <span class="nf">view</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ModelAndView</span><span class="p">();</span>
+	<span class="c1">// 跳转到success.jsp页面
+</span><span class="c1"></span>	<span class="n">view</span><span class="p">.</span><span class="na">setViewName</span><span class="p">(</span><span class="s">&#34;success&#34;</span><span class="p">);</span>
+
+	<span class="c1">// 模拟从数据库中查询的用户信息
+</span><span class="c1"></span>	<span class="n">User</span> <span class="nf">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="p">();</span>
+	<span class="n">user</span><span class="p">.</span><span class="na">setUsername</span><span class="p">(</span><span class="s">&#34;张三&#34;</span><span class="p">);</span>
+	<span class="n">user</span><span class="p">.</span><span class="na">setPassword</span><span class="p">(</span><span class="s">&#34;123&#34;</span><span class="p">);</span>
+
+	<span class="c1">//把use对象存储到mv对象中，也会把user对象存入到 request对象
+</span><span class="c1"></span>	<span class="n">view</span><span class="p">.</span><span class="na">addObject</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+
+	<span class="k">return</span> <span class="n">view</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>index.jsp</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-jsp" data-lang="jsp"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsp" data-lang="jsp">&lt;a href=&#34;user/testModelAndView&#34;&gt;testModelAndView&lt;/a&gt;&lt;br&gt;</code></pre></td></tr></table>
+</div>
+</div>
+<p>success.jsp</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-jsp" data-lang="jsp"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-jsp" data-lang="jsp">${requestScope.user}&lt;br&gt;
+${requestScope.user.username}
+${requestScope.user.password}
+${requestScope.user.age}</code></pre></td></tr></table>
+</div>
+</div>
+<p>打印:<br />
+User{username=&lsquo;张三&rsquo;, password=&lsquo;123&rsquo;, age=null}<br />
+张三 123</p>
+
+<h2 id="springmvc框架提供的转发和重定向">SpringMVC框架提供的转发和重定向</h2>
+
+<h3 id="forward请求转发">forward请求转发</h3>
+
+<p>controller 方法在提供了 String 类型的返回值之后，默认就是请求转发。想进行请求转发也可以写成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/**
+</span><span class="cm"> * 使用forward关键字进行请求转发
+</span><span class="cm"> * forward:转发的JSP路径&#34;，不走视图解析器了，所以需要编写完整的路径
+</span><span class="cm"> */</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&#34;testForward&#34;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">String</span> <span class="n">testForward</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s">&#34;forward:/WEB-INF/pages/success.jsp&#34;</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="redirect重定向">redirect重定向</h3>
+
+<p>重定向 return 就使用 redirect 关键字 ,这里的路径可以不用写项目名, springmvc 会自动帮我们加上。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&#34;testRedirect&#34;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">String</span> <span class="n">testRedirect</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s">&#34;redirect:/redirect.jsp&#34;</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="responsebody响应json数据">@ResponseBody响应json数据</h2>
+
+<p>jsp 向服务器发送 json 字符串, 服务器用<code>@RequestBody</code>注解封装到 bean 对象中 ( 把 json 字符串封装到对象要用到 jackson 的jar包 ),
+修改 Bean 对象后, 可以直接 return 该对象, 并使用<code>@ResponseBody</code>注解把 bean 对象转为 json 字符串</p>
+
+<p>导入依赖</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>jackson-databind<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>2.9.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>使用ajax发送json数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;responseBody&#34;</span><span class="p">&gt;</span>responseBody<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/jquery.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="c1">//页面加载
+</span><span class="c1"></span>    <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">debugger</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;#responseBody&#34;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+                <span class="nx">url</span><span class="o">:</span> <span class="s2">&#34;user/testAjax&#34;</span><span class="p">,</span>
+                <span class="nx">contentType</span><span class="o">:</span> <span class="s2">&#34;application/json;charset=UTF-8&#34;</span><span class="p">,</span><span class="c1">//发送信息至服务器时内容编码类型
+</span><span class="c1"></span>                <span class="nx">data</span><span class="o">:</span><span class="s1">&#39;{&#34;username&#34;:&#34;name&#34;,&#34;password&#34;:&#34;123456&#34;, &#34;age&#34;: 20}&#39;</span><span class="p">,</span>
+                <span class="nx">datatype</span><span class="o">:</span><span class="s2">&#34;json&#34;</span><span class="p">,</span> <span class="c1">// 预期服务器返回的数据类型
+</span><span class="c1"></span>                <span class="nx">type</span><span class="o">:</span><span class="s2">&#34;POST&#34;</span><span class="p">,</span>
+                <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">//data 服务器响应的json数据
+</span><span class="c1"></span>                    <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">username</span><span class="p">);</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">password</span><span class="p">);</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>controller控制器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/**
+</span><span class="cm"> * @return
+</span><span class="cm"> * @RequestBody 响应json数据
+</span><span class="cm"> */</span>
+<span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">&#34;/testAjax&#34;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nd">@ResponseBody</span> <span class="n">User</span> <span class="nf">testAjax</span><span class="p">(</span><span class="nd">@RequestBody</span> <span class="n">User</span> <span class="nf">user</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;user = &#34;</span> <span class="o">+</span> <span class="n">user</span><span class="p">);</span>
+	<span class="n">user</span><span class="p">.</span><span class="na">setUsername</span><span class="p">(</span><span class="s">&#34;pattyforu&#34;</span><span class="p">);</span>
+	<span class="k">return</span> <span class="n">user</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">PattyForu</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-10-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/springmvc/">SpringMVC</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/springmvc_%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">SpringMVC_文件上传</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/springmvc_%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/">
+            <span class="next-text nav-default">SpringMVC_编程风格</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+  <a href="http://example.org/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">PattyForu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

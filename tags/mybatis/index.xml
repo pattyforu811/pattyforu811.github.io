@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MyBatis on Patty</title>
+    <link>http://example.org/tags/mybatis/</link>
+    <description>Recent content in MyBatis on Patty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 Oct 2019 08:16:55 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/mybatis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mybatis Spring整合</title>
+      <link>http://example.org/post/mybatis-spring%E6%95%B4%E5%90%88/</link>
+      <pubDate>Wed, 02 Oct 2019 08:16:55 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis-spring%E6%95%B4%E5%90%88/</guid>
+      <description>&lt;p&gt;使用MyBatis提供的整合包mybatis-spring, 和spring框架进行整合&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyBatis_分页插件</title>
+      <link>http://example.org/post/mybatis_%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Tue, 01 Oct 2019 07:47:45 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6/</guid>
+      <description>&lt;p&gt;使用PageHelper进行MyBatis的分页管理&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyBatis_逆向工程</title>
+      <link>http://example.org/post/mybatis_%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Mon, 30 Sep 2019 10:11:43 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</guid>
+      <description>&lt;p&gt;使用generator 逆向生成代码&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyBatis_mapper文件</title>
+      <link>http://example.org/post/mybatis_mapper%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Sat, 28 Sep 2019 17:03:42 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_mapper%E6%96%87%E4%BB%B6/</guid>
+      <description>&lt;p&gt;mapper文件的配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mybatis_配置详解</title>
+      <link>http://example.org/post/mybatis_%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sat, 14 Sep 2019 18:05:37 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;p&gt;mybatis的全局配置文件的介绍&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyBatis_快速入门</title>
+      <link>http://example.org/post/mybatis_%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Fri, 13 Sep 2019 18:41:24 +0800</pubDate>
+      
+      <guid>http://example.org/post/mybatis_%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid>
+      <description>&lt;p&gt;Mybatis的快速入门&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

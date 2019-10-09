@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SpringMVC on Patty</title>
+    <link>http://example.org/tags/springmvc/</link>
+    <description>Recent content in SpringMVC on Patty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Oct 2019 22:16:21 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/springmvc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SpringMVC_Interceptor</title>
+      <link>http://example.org/post/springmvc_interceptor/</link>
+      <pubDate>Tue, 08 Oct 2019 22:16:21 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_interceptor/</guid>
+      <description>&lt;p&gt;Spring MVC 的 Interceptor 处理器拦截器的使用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_Exception</title>
+      <link>http://example.org/post/springmvc_exception/</link>
+      <pubDate>Tue, 08 Oct 2019 21:45:50 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_exception/</guid>
+      <description>&lt;p&gt;系统的 dao、service、controller 出现异常，都通过 throws Exception 向上抛出，最后由 springmvc 前端控制器交由异常处理器进行异常处理，不然异常会直接出现有jsp页面，这样对用户不友好&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_文件上传</title>
+      <link>http://example.org/post/springmvc_%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</link>
+      <pubDate>Tue, 08 Oct 2019 09:05:09 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_响应数据和结果视图</title>
+      <link>http://example.org/post/springmvc_%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/</link>
+      <pubDate>Fri, 04 Oct 2019 20:49:04 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E5%92%8C%E7%BB%93%E6%9E%9C%E8%A7%86%E5%9B%BE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_编程风格</title>
+      <link>http://example.org/post/springmvc_%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/</link>
+      <pubDate>Wed, 02 Oct 2019 22:02:17 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E7%BC%96%E7%A8%8B%E9%A3%8E%E6%A0%BC/</guid>
+      <description>&lt;p&gt;ANT风格和rest风格&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_知识点</title>
+      <link>http://example.org/post/springmvc_%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+      <pubDate>Mon, 09 Sep 2019 08:34:18 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SpringMVC_快速入门</title>
+      <link>http://example.org/post/springmvc_%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Thu, 05 Sep 2019 10:00:14 +0800</pubDate>
+      
+      <guid>http://example.org/post/springmvc_%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid>
+      <description>&lt;p&gt;SpringMVC介绍和使用&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Spring_aop的xml配置 - Patty</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="PattyForu" /><meta name="description" content="Spring aop的xml配置
+" /><meta name="keywords" content="Spring, Aop" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://example.org/post/spring_aop%E7%9A%84xml%E9%85%8D%E7%BD%AE/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Spring_aop的xml配置" />
+<meta property="og:description" content="Spring aop的xml配置" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/post/spring_aop%E7%9A%84xml%E9%85%8D%E7%BD%AE/" />
+<meta property="article:published_time" content="2019-09-07T11:51:31+08:00" />
+<meta property="article:modified_time" content="2019-09-07T11:51:31+08:00" />
+<meta itemprop="name" content="Spring_aop的xml配置">
+<meta itemprop="description" content="Spring aop的xml配置">
+
+
+<meta itemprop="datePublished" content="2019-09-07T11:51:31&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-07T11:51:31&#43;08:00" />
+<meta itemprop="wordCount" content="1740">
+
+
+
+<meta itemprop="keywords" content="Spring,Aop," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spring_aop的xml配置"/>
+<meta name="twitter:description" content="Spring aop的xml配置"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">PattyForu</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">PattyForu</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Spring_aop的xml配置</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-07 </span>
+        <div class="post-category">
+            <a href="/categories/spring/"> Spring </a>
+            </div>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#导入依赖">导入依赖</a></li>
+<li><a href="#准备通知">准备通知</a></li>
+<li><a href="#将通知类和目标对象交给spring管理">将通知类和目标对象交给spring管理</a></li>
+<li><a href="#配置aop">配置aop</a>
+<ul>
+<li><a href="#表达式的写法">表达式的写法：</a>
+<ul>
+<li><a href="#建议配置">建议配置：</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#知识点">知识点</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Spring aop的xml配置</p>
+
+<hr />
+
+<h2 id="导入依赖">导入依赖</h2>
+
+<p>aopalliance，spring-aop，aspectjweaver</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+    &lt;version&gt;5.0.8.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.aspectj&lt;/groupId&gt;
+    &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;
+    &lt;version&gt;1.8.7&lt;/version&gt;
+&lt;/dependency&gt;    </pre></td></tr></table>
+</div>
+</div>
+<p>在Spring4.0中，已经将aopalliance整合进spring-aop包中了，而spring-aop在导入spirng-context时也导入了</p>
+
+<h2 id="准备通知">准备通知</h2>
+
+<p>通知就是要增强的代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">import org.aspectj.lang.ProceedingJoinPoint;
+
+/**
+ * 用于记录日志的通知类
+ *
+ */
+public class LogUtils {
+    
+    /*
+     用于输出日志记录，想要在切入点方法执行之前执行
+     */
+    public void logStart(){
+        System.out.println(&#34;LogUtils的logStart方法开始记录日志了&#34;);
+    }
+    /**
+     * 后置,想要在切入点方法执行之后执行
+     */
+    public void logEnd(){
+        System.out.println(&#34;LogUtils的logEnd方法开始记录日志了&#34;);
+    }
+    
+    /**
+     * 异常，想要在切入点方法发生异常之后执行
+     */
+    public void logException(){
+        System.out.println(&#34;LogUtils的logException方法开始记录日志了&#34;);
+    }
+    
+    /**
+     * 最终，想要在切入点是否正常执行都会在最后执行
+     */
+    public void logFianl(){
+        System.out.println(&#34;LogUtils的logFianl方法开始记录日志了&#34;);
+    }
+    /**
+     * 环绕通知
+     * &lt;!-- 问题: 当配置环绕通知之后，切入点方法没有执行，而通知方法执行了
+               解决:
+                    ProceedingJoinPoint:接口，proceed()明确调用切入点方法，可以做为环绕通知的参数
+                    在程序执行时，spring框架会提供接口的实现类给我们使用
+     */
+    public Object logAround(ProceedingJoinPoint pjp){//动态代理的invoke方法一样
+        Object obj = null;
+        try {
+            Object[] objs = pjp.getArgs();//得到方法执行的所需参数
+             System.out.println(&#34;前置&#34;);
+             obj = pjp.proceed(objs);//明确调用切入点（业务层）方法
+             System.out.println(&#34;后置&#34;);
+            return obj;
+        } catch (Throwable e) {
+            System.out.println(&#34;异常&#34;);
+            throw new RuntimeException();
+        }finally {
+            System.out.println(&#34;最终&#34;);
+        }
+        
+    }</pre></td></tr></table>
+</div>
+</div>
+<h2 id="将通知类和目标对象交给spring管理">将通知类和目标对象交给spring管理</h2>
+
+<p>目标对象就是要被增强的代码类</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">   &lt;!-- 目标对象 --&gt;
+   &lt;bean id=&#34;userService&#34; class=&#34;com.pattyforu.service.impl.UserServiceImpl&#34;&gt;&lt;/bean&gt;
+   &lt;!-- 通知类--&gt;
+   &lt;bean id=&#34;logUtils&#34; class=&#34;com.pattyforu.utils.LogUtils&#34;&gt;&lt;/bean&gt;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="配置aop">配置aop</h2>
+
+<p>将通知织入目标对象中<br />
+配置步骤:</p>
+
+<ol>
+<li><p>使用aop: config标签表名开始aop的配置</p></li>
+
+<li><p>使用aop: config的子标签aop:acpect标签表名开始配置切面</p></li>
+
+<li><p>在aop: acpect中配置通知类型</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&lt;!-- aop配置 --&gt;
+&lt;aop:config&gt;
+&lt;!-- pointcut:用于指定切入点表达式，该表达式的含义代表
+	 对业务层service中的哪些方法进行增强 execution(表达式) --&gt;
+	&lt;aop:pointcut expression=&#34;execution(* com.pattyforu.service.impl.*.*(..))&#34; id=&#34;pt&#34;/&gt;
+&lt;!-- 配置切面 : 指定通知和切入点之间的关系 --&gt;
+&lt;aop:aspect id=&#34;logAdivce&#34; ref=&#34;logUtils&#34;&gt;
+	&lt;!-- 配置前置通知：
+		method属性：用于指定logUtils类中哪个方法作为前置通知--&gt;
+	   &lt;!-- &lt;aop:before method=&#34;logStart&#34;  pointcut-ref=&#34;pt&#34;/&gt; --&gt;
+	   &lt;!-- 配置后置通知 --&gt;
+	   &lt;!-- &lt;aop:after-returning method=&#34;logEnd&#34; pointcut-ref=&#34;pt&#34;/&gt; --&gt;
+	   &lt;!-- 配置异常通知 --&gt;
+	   &lt;!-- &lt;aop:after-throwing method=&#34;logException&#34; pointcut-ref=&#34;pt&#34;/&gt; --&gt;
+	   &lt;!-- 最终通知 --&gt;
+	   &lt;!-- &lt;aop:after method=&#34;logFianl&#34; pointcut-ref=&#34;pt&#34;/&gt; --&gt;
+	   &lt;!-- 环绕通知 --&gt;
+	   &lt;aop:around method=&#34;logAround&#34; pointcut-ref=&#34;pt&#34;/&gt;
+&lt;/aop:aspect&gt;
+&lt;/aop:config&gt;</pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+<h3 id="表达式的写法">表达式的写法：</h3>
+
+<ul>
+<li>方法定义：public void saveUser() {}</li>
+<li>访问权限修饰符 返回值 包名.类名.方法名(参数列表)</li>
+<li>表达式写法：public void com.pattyforu.service.impl.UserServiceImpl.saveUser()</li>
+
+<li><p>原始表达式  到  全通配表达式的过程：</p>
+
+<ol>
+<li>访问权限修饰符可以省略<br />
+<code>void com.pattyforu.service.impl.UserServiceImpl.saveUser()</code></li>
+<li>返回值类型可以使用通配符 *<br />
+`* com.pattyforu.service.impl.UserServiceImpl.saveUser()<br /></li>
+<li>包名可以使用通配符 ，表示任意包，但是又几级包就有些几个*.<br />
+    <code>* *.*.*.*.UserServiceImpl.saveUser()</code></li>
+
+<li><p>..表示当前包以及子包<br />
+<code>* *..UserServiceImpl.saveUser()</code></p></li>
+
+<li><p>类名和方法名都可以使用通配符进行匹配<br />
+<code>* *..*.*()</code></p></li>
+
+<li><p>方法的参数就可以使用.. 代表任意参数<br />
+<code>* *..*.*(..)</code></p></li>
+
+<li><p>全通配写法：<br />
+<code>* *..*.*(..)</code></p></li>
+</ol></li>
+</ul>
+
+<h4 id="建议配置">建议配置：</h4>
+
+<p>切到业务层实现类下的所有方法<br />
+　　<code>* com.pattyforu.service.impl.*.*(..)</code></p>
+
+<h2 id="知识点">知识点</h2>
+
+<p>连接点(joinpoint)：目标对象中,所有可以增强的方法(相当于所有方法)</p>
+
+<p>切入点(pointcut)：目标对象中,所有已经增强的方法</p>
+
+<p>通知(advice)：增强的代码的类</p>
+
+<p>目标对象(target)：被代理的对象(需要增强的方法的类)</p>
+
+<p>织入(weave)：将通知织入目标对象</p>
+
+<p>代理(proxy)：将通知织入目标对象之后,形成的代理对象(代理对象就是织入通知后的目标对象)</p>
+
+<p>切面(aspect)：切入点+通知</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">PattyForu</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-09-07
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/spring/">Spring</a>
+          <a href="/tags/aop/">Aop</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/spring_aop%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Spring_aop注解配置</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/java_%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%9E%E6%8E%A5%E6%B1%A0/">
+            <span class="next-text nav-default">Java_自定义连接池</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+  <a href="http://example.org/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">PattyForu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aop on Patty</title>
+    <link>http://example.org/tags/aop/</link>
+    <description>Recent content in aop on Patty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Sep 2019 14:41:29 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/aop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring_aop事务注解配置</title>
+      <link>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 13 Sep 2019 14:41:29 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用注解配置aop事务&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop事务xml配置</title>
+      <link>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1xml%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 12 Sep 2019 09:55:09 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E4%BA%8B%E5%8A%A1xml%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;Spring_aop事务配置式的xml配置,使用Spring提供好的事务通知进行配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop注解配置</title>
+      <link>http://example.org/post/spring_aop%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 08 Sep 2019 18:15:38 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;使用xml和注解配置aop&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring_aop的xml配置</title>
+      <link>http://example.org/post/spring_aop%E7%9A%84xml%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 07 Sep 2019 11:51:31 +0800</pubDate>
+      
+      <guid>http://example.org/post/spring_aop%E7%9A%84xml%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;Spring aop的xml配置&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

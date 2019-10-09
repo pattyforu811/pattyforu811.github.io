@@ -6,26 +6,44 @@
     <description>Recent content in Categories on Patty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Sep 2019 17:58:46 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2019 22:16:21 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Sprig</title>
-      <link>http://example.org/categories/sprig/</link>
-      <pubDate>Mon, 02 Sep 2019 17:58:46 +0800</pubDate>
+      <title>SpringMVC</title>
+      <link>http://example.org/categories/springmvc/</link>
+      <pubDate>Tue, 08 Oct 2019 22:16:21 +0800</pubDate>
       
-      <guid>http://example.org/categories/sprig/</guid>
+      <guid>http://example.org/categories/springmvc/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>spring</title>
+      <title>MyBatis</title>
+      <link>http://example.org/categories/mybatis/</link>
+      <pubDate>Wed, 02 Oct 2019 08:16:55 +0800</pubDate>
+      
+      <guid>http://example.org/categories/mybatis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring</title>
       <link>http://example.org/categories/spring/</link>
-      <pubDate>Mon, 02 Sep 2019 15:34:49 +0800</pubDate>
+      <pubDate>Wed, 02 Oct 2019 08:16:55 +0800</pubDate>
       
       <guid>http://example.org/categories/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://example.org/categories/java/</link>
+      <pubDate>Sat, 07 Sep 2019 10:53:23 +0800</pubDate>
+      
+      <guid>http://example.org/categories/java/</guid>
       <description></description>
     </item>
     
